@@ -177,32 +177,50 @@ img {
 .nav-left {
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-weight: 700;
-  font-size: 1.1rem;
+  gap: 16px;
 }
 
-.nav-left img {
-  width: 60px;
-  /* Wider for rectangular logo */
+.logo-container {
+  width: 45px;
   height: 45px;
-  /* Maintains aspect ratio */
-  object-fit: contain;
-  /* Ensures logo isn't cropped */
-  border-radius: 8px;
-  /* Slight rounding for modern look */
-  background: rgba(255, 255, 255, 0.05);
-  /* Subtle background */
-  padding: 6px;
-  /* Breathing room */
-  cursor: pointer;
-  /* Indicates clickable */
+  background: #1e293b;
+  /* Darker surface for logo box */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.nav-left img:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: scale(1.05);
+.logo-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 50%;
+  /* Circular logo as seen in screenshot */
+}
+
+.logo-container:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  background: #334155;
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+.resume-nav-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.resume-nav-link:hover {
+  color: var(--accent-primary);
 }
 
 .nav-links {
