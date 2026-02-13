@@ -2540,7 +2540,9 @@ footer {
   line-height: 1.6;
 }
 
-/* Responsive */
+/* =========================
+   GLOBAL MOBILE RESPONSIVENESS
+========================= */
 @media (max-width: 768px) {
   .achievement-card {
     min-width: 300px;
