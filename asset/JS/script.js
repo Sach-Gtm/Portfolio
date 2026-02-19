@@ -3,13 +3,37 @@
 ================================ */
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
+  initMobileMenu();
   initBackgroundAnimation();
   initTimelineObserver(); // Trigger animation when in view
   initCertificateZoom();
   initTypewriter();
-  initTypewriter();
-  // initSkillsChart(); // Removed as per user request
 });
+
+/* ================================
+   MOBILE MENU
+================================ */
+function initMobileMenu() {
+  const menuBtn = document.querySelector(".mobile-menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+  const links = document.querySelectorAll(".nav-links a");
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navLinks.classList.toggle("active");
+      document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "";
+    });
+
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        menuBtn.classList.remove("active");
+        navLinks.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    });
+  }
+}
 
 /* ================================
    THEME TOGGLE
@@ -17,19 +41,26 @@ document.addEventListener("DOMContentLoaded", () => {
 function initTheme() {
   const themeToggle = document.getElementById("themeToggle");
   const body = document.body;
-  const savedTheme = localStorage.getItem("theme");
+  const themes = ["dark", "light", "midnight"];
 
-  if (savedTheme === "light") {
-    body.classList.add("light");
-  }
+  let currentTheme = localStorage.getItem("theme") || "dark";
+  body.className = currentTheme;
 
   if (themeToggle) {
     themeToggle.addEventListener("click", () => {
-      body.classList.toggle("light");
-      localStorage.setItem(
-        "theme",
-        body.classList.contains("light") ? "light" : "dark"
-      );
+      let currentIndex = themes.indexOf(currentTheme);
+      let nextIndex = (currentIndex + 1) % themes.length;
+      currentTheme = themes[nextIndex];
+
+      body.className = currentTheme;
+      localStorage.setItem("theme", currentTheme);
+
+      // Optional: Update toggle icon based on theme
+      const icon = themeToggle.querySelector("img");
+      if (icon) {
+        if (currentTheme === "light") icon.src = "asset/Images/logos/darkmode.png";
+        else icon.src = "asset/Images/logos/lightmode.png";
+      }
     });
   }
 }
