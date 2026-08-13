@@ -33,6 +33,26 @@
     { "title": "Product Mindset", "desc": "I care about how users experience a system — from workflows and performance to simplicity and usability." }
   ],
 
+  "_v2AddedFacts": {
+    "_note": "Provided by Sachin on 2026-08-13, not present anywhere in the v1 site. These reframe the whole positioning — StaplerLabs and the hackathon record now lead. Each still needs the detail flagged below.",
+    "status": "CS pre-final year student",
+    "staplerLabs": {
+      "role": "Running / Director",
+      "company": "StaplerLabs",
+      "type": "Tech consulting firm",
+      "markets": ["EdTech", "Healthcare / doctors"],
+      "claim": "Built many market solutions, especially for the EdTech and doctor markets",
+      "brandKit": { "navy": "#0D2545", "yellow": "#F5C400", "cream": "#F2F0EB", "ink": "#111827", "muted": "#6B6B6B" },
+      "_needed": ["Founded date", "Team size", "Exact title (Director / Founder / both)", "Product names + one-line description each", "One shareable metric (clinics live, students reached, clients shipped, revenue band)", "Public URLs"]
+    },
+    "hackathons": {
+      "record": "3× winner or runner-up",
+      "known": ["Winner — Coding Ninjas Inter-Campus Hackathon (from v1)"],
+      "mentorship": "Mentors at many hackathons; mentored one at Paytm",
+      "_needed": ["Names, years and placement for all 3 results", "What was built in each", "Paytm event name + date + mentor-or-judge", "Total count of hackathons mentored and which"]
+    }
+  },
+
   "experience": [
     {
       "id": "unicorn-denmart",
