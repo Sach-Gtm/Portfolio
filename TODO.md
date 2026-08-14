@@ -17,10 +17,24 @@ Search the codebase for `TODO(Sachin)` to find each one in place.
 | 6 | `index.html` — form `data-endpoint` | Empty. The form currently falls back to opening the visitor's mail client, which works but loses you the lead if they have no mail app configured. Add a Formspree ID or a Vercel function URL. |
 | 7 | `asset/Images/og-card.png` | **Does not exist yet.** Referenced by the Open Graph tags. Until it's added, LinkedIn and WhatsApp previews show a broken image. 1200×630. |
 
+## ⚠️ One photo I did not publish
+
+`20260721_173946.heic` — the StaplerLabs office door. It's a clean shot, but the
+registration plate beside the door is fully legible and shows your **PAN, TAN, GST
+and CIN numbers plus the full registered address**. Putting that on a public page
+hands identity-fraud and impersonation material to anyone who saves the image.
+
+It's your company and your call. If you want it used, either reshoot without the
+plate in frame, or say so and I'll blur the plate before publishing. It is not in
+the repo right now.
+
 ## Should fix soon
 
-- **Proof-wall alt text** — I wrote plausible descriptions for all 10 images without having
-  seen them. Correct any that are wrong; they're read aloud by screen readers.
+- **Proof-wall alt text** — I wrote plausible descriptions for the 10 original Impact
+  images without having seen them. Correct any that are wrong; they're read aloud by
+  screen readers. (The four new photos have accurate alt text — I checked those.)
+- **Paytm photo** — none of the uploaded photos was the Paytm one. The hackathons section
+  currently uses the lectern shot instead. Send the Paytm image if you have it.
 - **Samsung R&D** — removed from the site entirely. v1 claimed it in the timeline and meta
   tags with no matching experience entry. If it's real, send details and it goes back in.
 - **React** — removed from the meta keywords, since the skills list never supported it.
