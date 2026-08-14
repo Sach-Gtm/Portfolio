@@ -52,6 +52,7 @@
     initHeroArt();
     initParallax();
     initRoleRotator();
+    initBooking();
   });
 
   /* ---------------- mobile menu ---------------- */
@@ -221,6 +222,45 @@
           note.textContent = 'That didn’t send. Email me directly at Sachin.gautam8292@gmail.com.';
         })
         .finally(function () { btn.disabled = false; btn.textContent = label; });
+    });
+  }
+
+  /* ---------------- book a 1:1 (emails Sachin) ---------------- */
+  function initBooking() {
+    var form = $('#bookForm'), note = $('#bookNote');
+    if (!form) return;
+    var to = form.getAttribute('data-to') || 'sachin.gautam8292@gmail.com';
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var fd = new FormData(form);
+      var name = (fd.get('name') || '').toString().trim();
+      var email = (fd.get('email') || '').toString().trim();
+      var topic = (fd.get('topic') || '').toString().trim();
+      var when = (fd.get('when') || '').toString().trim();
+      var endpoint = (form.getAttribute('data-endpoint') || '').trim();
+      note.className = 'form-note';
+
+      if (endpoint) {
+        var btn = $('button[type=submit]', form), label = btn.textContent;
+        btn.disabled = true; btn.textContent = 'Sending…';
+        fetch(endpoint, { method: 'POST', body: fd, headers: { Accept: 'application/json' } })
+          .then(function (r) { if (!r.ok) throw 0; form.reset();
+            note.textContent = 'Sent — Sachin will confirm your slot by email.'; })
+          .catch(function () { note.className = 'form-note err';
+            note.textContent = 'Couldn’t send. Email ' + to + ' directly.'; })
+          .finally(function () { btn.disabled = false; btn.textContent = label; });
+        return;
+      }
+
+      // No backend: open a pre-filled email addressed to Sachin.
+      var subject = encodeURIComponent('1:1 session request — ' + (name || 'someone'));
+      var body = encodeURIComponent(
+        'Hi Sachin, I\'d like to book a 1:1.\n\n' +
+        'Name: ' + name + '\nEmail: ' + email + '\nTopic: ' + topic +
+        '\nPreferred time: ' + when + '\n');
+      window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
+      note.textContent = 'Opening your email app to send the request…';
     });
   }
 

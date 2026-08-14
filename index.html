@@ -97,7 +97,7 @@
           <span class="float-badge fb-2" data-depth="-20" aria-hidden="true">&#9889;</span>
           <img class="hero-figure" data-depth="12" src="asset/Images/profile/cutout-mait.webp"
                alt="Sachin Gautam" width="456" height="1184" fetchpriority="high" decoding="async">
-          <div class="orb" data-depth="34"><canvas id="heroCanvas" aria-hidden="true"></canvas></div>
+          <span class="float-badge fb-3" data-depth="30" aria-hidden="true">&#127968;</span>
         </div>
 
         <!-- right: who + what -->
@@ -528,6 +528,41 @@
             </div>
             <button class="btn solid full" type="submit">Send message</button>
             <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- Book a 1:1 -->
+        <div class="book-wrap reveal">
+          <div class="book-head">
+            <p class="eyebrow">Book a 1:1</p>
+            <h3>Grab 30 minutes with me</h3>
+            <p class="book-sub">Career, code, or building a startup &mdash; pick a topic and a time that suits you.
+              I&rsquo;ll confirm by email.</p>
+          </div>
+          <!-- On submit this emails the request straight to Sachin. Swap data-endpoint for a
+               Formspree ID to receive it without the visitor needing a mail app. -->
+          <form class="book-form" id="bookForm" method="POST" data-endpoint=""
+                data-to="sachin.gautam8292@gmail.com">
+            <div class="book-grid">
+              <div class="field"><label for="bk-name">Name</label>
+                <input id="bk-name" name="name" type="text" required autocomplete="name"></div>
+              <div class="field"><label for="bk-email">Email</label>
+                <input id="bk-email" name="email" type="email" required autocomplete="email"></div>
+            </div>
+            <div class="book-grid">
+              <div class="field"><label for="bk-topic">Topic</label>
+                <select id="bk-topic" name="topic" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Career guidance</option>
+                  <option>Code / engineering</option>
+                  <option>Startup &amp; building</option>
+                  <option>Something else</option>
+                </select></div>
+              <div class="field"><label for="bk-when">Preferred time</label>
+                <input id="bk-when" name="when" type="text" placeholder="e.g. Sat evening" required></div>
+            </div>
+            <button class="btn solid full" type="submit">Request my slot</button>
+            <p class="form-note" id="bookNote" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
