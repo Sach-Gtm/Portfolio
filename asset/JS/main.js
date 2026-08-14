@@ -268,7 +268,7 @@
       '  if(h<0.001) return 0.0; r=min(r,9.0*h/t); t+=clamp(h,0.02,0.22); if(t>5.0) break;} return clamp(r,0.0,1.0);}',
       'void main(){',
       '  vec2 uv=(gl_FragCoord.xy-0.5*uRes)/min(uRes.x,uRes.y);',
-      '  vec3 ro=vec3(uM.x*0.60, uM.y*0.45, 6.45);',
+      '  vec3 ro=vec3(uM.x*0.50, uM.y*0.38, 8.60);',
       '  vec3 f=normalize(-ro), rt=normalize(cross(vec3(0.0,1.0,0.0),f)), u=cross(f,rt);',
       '  vec3 rd=normalize(uv.x*rt+uv.y*u+2.05*f);',
       '  float t=0.0, hit=0.0;',
