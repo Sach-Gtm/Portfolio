@@ -245,7 +245,7 @@
     var FS = [
       'precision highp float;',
       'uniform vec2 uRes; uniform float uT; uniform vec2 uM;',
-      'uniform vec3 uBg, uInk, uAcc;',
+      'uniform vec3 uBg, uInk, uAcc, uSky;',
       'mat2 rot(float a){float s=sin(a),c=cos(a);return mat2(c,-s,s,c);}',
       'float sdBox(vec3 p, vec3 b, float r){vec3 q=abs(p)-b;return length(max(q,0.0))+min(max(q.x,max(q.y,q.z)),0.0)-r;}',
       'float sdSph(vec3 p,float r){return length(p)-r;}',
@@ -283,11 +283,11 @@
       '    float occ=ao(p,n);',
       '    float fres=pow(1.0-clamp(dot(n,-rd),0.0,1.0),3.2);',
       '    float rim=clamp(dot(n,normalize(vec3(0.85,0.30,-0.45))),0.0,1.0);',
-      '    vec3 base=mix(uBg*0.99, vec3(1.0), 0.30);',
-      '    vec3 sur=base*(0.52+0.52*dif*mix(0.60,1.0,sh))*mix(0.78,1.0,occ);',
-      '    sur=mix(sur, uInk, (1.0-dif)*0.17*mix(0.6,1.0,1.0-occ));',
-      '    sur+=uAcc*pow(rim,2.1)*0.34;',
-      '    sur+=uAcc*fres*0.16;',
+      '    vec3 base=mix(uBg, vec3(1.0), 0.72);',
+      '    vec3 sur=base*(0.60+0.46*dif*mix(0.62,1.0,sh))*mix(0.80,1.0,occ);',
+      '    sur=mix(sur, uInk, (1.0-dif)*0.26*mix(0.55,1.0,1.0-occ));',
+      '    sur+=uAcc*pow(rim,1.9)*0.46;',
+      '    sur+=uSky*fres*0.30;',
       '    float spec=pow(clamp(dot(reflect(-ld,n),-rd),0.0,1.0),42.0);',
       '    sur+=vec3(1.0)*spec*0.30*sh;',
       '    col=sur;',
@@ -322,7 +322,8 @@
 
     var uRes = gl.getUniformLocation(prog, 'uRes'), uT = gl.getUniformLocation(prog, 'uT'),
         uM = gl.getUniformLocation(prog, 'uM'), uBg = gl.getUniformLocation(prog, 'uBg'),
-        uInk = gl.getUniformLocation(prog, 'uInk'), uAcc = gl.getUniformLocation(prog, 'uAcc');
+        uInk = gl.getUniformLocation(prog, 'uInk'), uAcc = gl.getUniformLocation(prog, 'uAcc'),
+        uSky = gl.getUniformLocation(prog, 'uSky');
 
     var dpr = Math.min(window.devicePixelRatio || 1, 1.75);
     function resize() {
@@ -341,12 +342,14 @@
         var s = cs.getPropertyValue(name).trim();
         return s ? s.split(',').map(Number) : fallback;
       }
-      var bg = v('--gl-bg', [.949, .941, .921]),
-          ink = v('--gl-ink', [.051, .145, .271]),
-          acc = v('--gl-acc', [.961, .769, 0]);
+      var bg = v('--gl-bg', [.894, .953, .996]),
+          ink = v('--gl-ink', [.024, .165, .267]),
+          acc = v('--gl-acc', [1, .788, .302]),
+          sky = v('--gl-sky', [.220, .741, .972]);
       gl.uniform3f(uBg, bg[0], bg[1], bg[2]);
       gl.uniform3f(uInk, ink[0], ink[1], ink[2]);
       gl.uniform3f(uAcc, acc[0], acc[1], acc[2]);
+      gl.uniform3f(uSky, sky[0], sky[1], sky[2]);
     };
     window.__syncShaderTheme();
 
