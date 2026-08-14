@@ -50,6 +50,8 @@
     initTimelineRail();
     initForm();
     initHeroArt();
+    initParallax();
+    initRoleRotator();
   });
 
   /* ---------------- mobile menu ---------------- */
@@ -220,6 +222,49 @@
         })
         .finally(function () { btn.disabled = false; btn.textContent = label; });
     });
+  }
+
+  /* ---------------- hero parallax (depth on pointer move) ---------------- */
+  function initParallax() {
+    var stage = $('#stage');
+    if (!stage || reduce) return;
+    var layers = $$('[data-depth]', stage);
+    var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+
+    function onMove(e) {
+      var r = stage.getBoundingClientRect();
+      tx = ((e.clientX - (r.left + r.width / 2)) / r.width);
+      ty = ((e.clientY - (r.top + r.height / 2)) / r.height);
+      if (!raf) raf = requestAnimationFrame(apply);
+    }
+    function apply() {
+      raf = null;
+      cx += (tx - cx) * 0.08;
+      cy += (ty - cy) * 0.08;
+      layers.forEach(function (el) {
+        var d = parseFloat(el.getAttribute('data-depth')) || 0;
+        el.style.translate = (cx * d) + 'px ' + (cy * d) + 'px';
+      });
+      if (Math.abs(tx - cx) > 0.001 || Math.abs(ty - cy) > 0.001) raf = requestAnimationFrame(apply);
+    }
+    window.addEventListener('pointermove', onMove, { passive: true });
+  }
+
+  /* ---------------- hero role rotator ---------------- */
+  function initRoleRotator() {
+    var el = $('#roleRot');
+    if (!el) return;
+    var roles = ['Software Engineer', 'Founder', 'Builder', 'Problem-solver'];
+    if (reduce) return;
+    var i = 0;
+    setInterval(function () {
+      el.classList.add('out');
+      setTimeout(function () {
+        i = (i + 1) % roles.length;
+        el.textContent = roles[i];
+        el.classList.remove('out');
+      }, 300);
+    }, 2600);
   }
 
   /* ============================================================

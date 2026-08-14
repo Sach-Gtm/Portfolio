@@ -74,37 +74,44 @@
     <span id="top"></span>
 
     <!-- ============ HERO ============ -->
-    <section class="hero">
-      <div class="hero-grid wrap">
-        <div class="hero-copy">
-          <p class="eyebrow reveal">Director, StaplerLabs · New Delhi</p>
-          <h1 class="hero-h1">
-            <span class="line"><span>Built it.</span></span>
-            <span class="line"><span>Shipped it.</span></span>
-            <span class="line"><span class="accent">Supported it.</span></span>
+    <section class="hero" id="hero">
+      <div class="clouds" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+
+      <div class="hero-inner">
+        <!-- left: the signature line -->
+        <div class="hero-left">
+          <span class="hello reveal"><i></i> Hello, I&rsquo;m Sachin</span>
+          <h1 class="hero-title">
+            <span class="ln"><span>Built it.</span></span>
+            <span class="ln"><span>Shipped it.</span></span>
+            <span class="ln"><span class="accent">Supported it.</span></span>
           </h1>
-          <p class="lede reveal">
-            Software for <strong>EdTech</strong> and <strong>healthcare</strong>.
-            I've also stood in the clinic when it broke.
-          </p>
-          <div class="hero-cta reveal">
-            <a class="btn solid" href="#work">See my work</a>
-            <a class="btn" href="#contact">Get in touch</a>
-          </div>
+          <a class="hero-link reveal" href="#work">See what I&rsquo;ve built <span aria-hidden="true">&rarr;</span></a>
         </div>
 
-        <div class="hero-art reveal">
-          <div class="photo-frame">
-            <img src="asset/Images/profile/portrait.webp" alt="Sachin Gautam"
-                 width="900" height="1200" fetchpriority="high" decoding="async">
-            <div class="orb">
-              <canvas id="heroCanvas" aria-hidden="true"></canvas>
-            </div>
-          </div>
+        <!-- centre: arch + figure + floating 3D orb -->
+        <div class="hero-stage" id="stage">
+          <div class="arch" data-depth="6" aria-hidden="true"></div>
+          <div class="arch-glow" aria-hidden="true"></div>
+          <span class="float-badge fb-1" data-depth="26" aria-hidden="true">&lt;/&gt;</span>
+          <span class="float-badge fb-2" data-depth="-20" aria-hidden="true">&#9889;</span>
+          <img class="hero-figure" data-depth="12" src="asset/Images/profile/cutout-mait.webp"
+               alt="Sachin Gautam" width="456" height="1184" fetchpriority="high" decoding="async">
+          <div class="orb" data-depth="34"><canvas id="heroCanvas" aria-hidden="true"></canvas></div>
+        </div>
+
+        <!-- right: who + what -->
+        <div class="hero-right">
+          <p class="hero-name reveal">Sachin<br>Gautam</p>
+          <p class="hero-role reveal"><span class="dash"></span><span class="role-rot" id="roleRot">Software Engineer</span></p>
+          <p class="hero-tag reveal">I build software for classrooms and clinics &mdash; the kind people
+            use every day, and call me about when it breaks.</p>
+          <a class="btn solid reveal" href="#contact">Let&rsquo;s build something <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
-    </section>
 
+      <a class="scroll-cue reveal" href="#work" aria-label="Scroll down"><span></span></a>
+    </section>
 
     <!-- ============ TICKER ============ -->
     <div class="ticker" aria-hidden="true">
@@ -133,8 +140,9 @@
     <section id="work" class="sec">
       <div class="wrap">
         <div class="sec-head reveal">
-          <p class="eyebrow">What I do</p>
-          <h2>Two markets, one obsession</h2>
+          <p class="eyebrow">What I actually do</p>
+          <h2>Classrooms and clinics</h2>
+          <p class="lede">Two worlds most engineers never touch. I build for both &mdash; and I&rsquo;m the one who picks up the phone when it breaks.</p>
         </div>
 
         <div class="cards-3">
@@ -158,7 +166,7 @@
               </svg>
             </div>
             <h3>EdTech</h3>
-            <p>Platforms for how people actually learn.</p>
+            <p>Learning tools that don&rsquo;t fall over when a whole class logs in at 9am.</p>
           </article>
 
           <article class="card lift reveal">
@@ -173,7 +181,7 @@
               </svg>
             </div>
             <h3>Healthcare</h3>
-            <p>Software that runs beside clinical work.</p>
+            <p>Software doctors trust mid-appointment &mdash; because I&rsquo;ve been the one they call.</p>
           </article>
 
           <article class="card lift reveal">
@@ -190,15 +198,15 @@
               </svg>
             </div>
             <h3>Consulting</h3>
-            <p>From "we need something built" to live and maintained.</p>
+            <p>From &ldquo;we need something built&rdquo; to something live, and still standing a year later.</p>
           </article>
         </div>
 
         <!-- TODO(Sachin): replace the three placeholder projects below with real StaplerLabs
              products — name, market, one-line description, stack, live URL, and one outcome metric. -->
         <div class="sec-head reveal" style="margin-top:var(--s-9)">
-          <p class="eyebrow">Selected projects</p>
-          <h2>Things I've shipped</h2>
+          <p class="eyebrow">A few things I&rsquo;ve made</p>
+          <h2>Stuff that&rsquo;s live</h2>
         </div>
 
         <div class="cards-2">
@@ -248,7 +256,7 @@
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="eyebrow">Experience</p>
-          <h2>Where I learned what production means</h2>
+          <h2>Where I learned the hard way</h2>
         </div>
 
         <div class="timeline" id="timeline">
@@ -260,7 +268,7 @@
               <span class="tag hot">Current</span>
             </div>
             <p class="job-meta">StaplerLabs · Tech consulting · New Delhi</p>
-            <p>Market solutions for education and healthcare businesses.</p>
+            <p>I run a small consulting studio building real software for education and healthcare businesses &mdash; scoping it, shipping it, and owning it after.</p>
             <!-- TODO(Sachin): founded date, team size, product names, one public metric -->
           </article>
 
@@ -313,7 +321,7 @@
       <div class="wrap">
         <div class="sec-head reveal">
           <p class="eyebrow">Hackathons</p>
-          <h2>I compete. I also get invited back to mentor.</h2>
+          <h2>I win a few. Then they ask me to judge.</h2>
         </div>
 
         <div class="hack-grid">
@@ -352,33 +360,33 @@
                    width="900" height="1200" loading="lazy" decoding="async">
             </figure>
             <p class="eyebrow">About</p>
-            <h2>Most of what I know happened outside a classroom</h2>
+            <h2>School taught me theory. India taught me the rest.</h2>
             <p class="lede" style="margin-top:var(--s-4)">
-              Pre-final-year CS at MAIT. The real education was in clinics, on support calls,
-              and in rooms convincing brands to write cheques.
+              I&rsquo;m a pre-final-year CS student &mdash; but the lessons that stuck came from clinics
+              across India, late support calls, and rooms where I had to convince brands to write cheques.
             </p>
             <p class="body-p">
-              I care less about what a system does on my machine than what it does on
-              someone else's, six months later, at 2am.
+              I don&rsquo;t care much what a system does on my laptop. I care what it does on
+              someone else&rsquo;s, six months later, at 2am. That&rsquo;s the only test that counts.
             </p>
           </div>
 
           <div class="pillars">
             <div class="pillar reveal">
               <h4>Systems builder</h4>
-              <p>Reliability over flash. Systems that don't wake you at night.</p>
+              <p>I&rsquo;d rather ship something dull that never breaks than something clever that pages you at 3am.</p>
             </div>
             <div class="pillar reveal">
               <h4>Problem solver</h4>
-              <p>I want to know <em>why</em> it broke, not just silence the error.</p>
+              <p>&ldquo;It works now&rdquo; isn&rsquo;t enough. I want to know <em>why</em> it broke so it can&rsquo;t again.</p>
             </div>
             <div class="pillar reveal">
               <h4>Execution &amp; leadership</h4>
-              <p>Led teams, closed sponsors, owned outcomes end to end.</p>
+              <p>I&rsquo;ve led teams, closed sponsors, and been the name on the result. I don&rsquo;t hide from it.</p>
             </div>
             <div class="pillar reveal">
               <h4>Product mindset</h4>
-              <p>I've watched real users struggle with my software. It changes you.</p>
+              <p>Watching a real person fight your software in front of you changes how you build. For good.</p>
             </div>
           </div>
         </div>
@@ -482,10 +490,10 @@
         <div class="contact-grid">
           <div class="reveal">
             <p class="eyebrow">Contact</p>
-            <h2>Let's build something</h2>
+            <h2>Got something worth building?</h2>
             <p class="lede" style="margin-top:var(--s-4)">
-              I'm looking for work where the system has real users and real consequences. If that's
-              what you're building, I'd like to hear about it.
+              I&rsquo;m after work where the software has real users and real stakes. If that&rsquo;s what
+              you&rsquo;re building, tell me about it &mdash; I reply to everything.
             </p>
             <div class="contact-rows">
               <a class="crow" href="mailto:Sachin.gautam8292@gmail.com">
@@ -530,7 +538,7 @@
     <div class="wrap foot-in">
       <div>
         <p class="foot-name">Sachin Gautam</p>
-        <p class="foot-tag">Building systems that hold up.</p>
+        <p class="foot-tag">Still shipping. Still picking up the phone.</p>
       </div>
       <div class="socials">
         <a href="mailto:Sachin.gautam8292@gmail.com" aria-label="Email">
