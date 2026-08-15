@@ -5,19 +5,19 @@
 
 :root {
   --nav-h:78px;
-  --sky-0:#F4FBFF;
-  --sky-1:#E4F3FE;
-  --sky-2:#CDE9FB;
-  --sky-3:#A9D8F7;
-  --ink:#062A44;
-  --ink-2:#37627F;
-  --ink-3:#7BA3BE;
-  --acc:#0C8FD6;
-  --acc-ink:#0A6DA6;
-  --acc-2:#38BDF8;
+  --sky-0:#E9F1FB;
+  --sky-1:#C3D8F1;
+  --sky-2:#A9C6EA;
+  --sky-3:#8FB4E3;
+  --ink:#0E2338;
+  --ink-2:#3A5570;
+  --ink-3:#6C89A8;
+  --acc:#1E7BC8;
+  --acc-ink:#155E9E;
+  --acc-2:#3B9BE0;
   --sun:#FFC94D;
-  --warm:#FF6A3D;
-  --warm-2:#FF8A5B;
+  --warm:#F4551D;
+  --warm-2:#FF7A45;
 
   --ground:var(--sky-1);
   --surface:#FFFFFF;
@@ -86,8 +86,8 @@ body{
   margin:0;color:var(--ink);
   background-color:var(--ground);
   background-image:
-    radial-gradient(120% 70% at 50% -10%, var(--sky-0), transparent 58%),
-    linear-gradient(180deg, var(--sky-3) 0%, var(--sky-2) 18%, var(--sky-0) 58%, var(--sky-1) 100%);
+    radial-gradient(110% 60% at 50% 0%, var(--sky-0), transparent 55%),
+    linear-gradient(180deg, var(--sky-3) 0%, var(--sky-2) 30%, var(--sky-1) 65%, var(--sky-2) 100%);
   background-attachment:fixed,fixed;
   background-repeat:no-repeat,no-repeat;
   font-family:var(--body);font-size:16.5px;line-height:1.62;
@@ -210,7 +210,7 @@ html[data-theme="dark"] .i-moon{display:block}
   padding:calc(var(--nav-h,96px) + var(--s-4)) 0 0;overflow:hidden;isolation:isolate}
 .clouds{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
 .clouds i{
-  position:absolute;border-radius:50%;background:#fff;filter:blur(14px);opacity:.85;
+  position:absolute;border-radius:50%;background:#fff;filter:blur(16px);opacity:.95;
   box-shadow:60px 10px 0 -6px #fff, 130px 24px 0 -14px #fff, -60px 18px 0 -10px #fff}
 .clouds i:nth-child(1){width:150px;height:54px;top:14%;left:-8%;animation:cloud 60s linear infinite}
 .clouds i:nth-child(2){width:110px;height:42px;top:30%;left:-14%;opacity:.6;animation:cloud 88s linear infinite}

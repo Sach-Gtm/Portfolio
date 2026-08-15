@@ -25,7 +25,7 @@
     if (saved === 'dark' || saved === 'light') {
       root.setAttribute('data-theme', saved);
     } else {
-      root.setAttribute('data-theme', 'dark');   // dark sky-blue is the default
+      root.setAttribute('data-theme', 'light');   // saturated sky-blue is the default
     }
   })();
 
