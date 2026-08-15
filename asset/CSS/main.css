@@ -114,6 +114,7 @@ em{font-style:normal;font-weight:650}
 .muted{color:var(--ink-3)}
 .accent{color:var(--acc-ink)}
 .hero-title .accent{color:var(--warm)}
+.hero-title .ln:last-child{margin-top:2px}
 
 .skip{position:absolute;left:-9999px;top:0;z-index:200;background:var(--acc);color:#fff;
       padding:12px 18px;border-radius:0 0 10px 0;font-weight:700}
@@ -234,7 +235,7 @@ html[data-theme="dark"] .clouds i{background:#9Fc4dd;opacity:.10;filter:blur(20p
   -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:var(--shadow)}
 .hello i{width:7px;height:7px;border-radius:50%;background:var(--acc);flex:none;
   box-shadow:0 0 0 0 color-mix(in srgb,var(--acc) 60%,transparent);animation:pulse 2.4s infinite}
-.hero-title{margin:var(--s-5) 0;font-size:clamp(32px,4.4vw,58px);line-height:.96;white-space:nowrap}
+.hero-title{margin:var(--s-5) 0;font-size:clamp(46px,7vw,92px);line-height:.9;white-space:nowrap;letter-spacing:-.05em}
 .hero-title .ln{display:block;overflow:hidden}
 .hero-title .ln>span{display:block;transform:translateY(108%)}
 .loaded .hero-title .ln>span{animation:lineUp .9s var(--ease) forwards}
@@ -249,7 +250,7 @@ html[data-theme="dark"] .clouds i{background:#9Fc4dd;opacity:.10;filter:blur(20p
 /* centre stage */
 .hero-stage{
   position:relative;justify-self:center;width:100%;
-  height:min(78svh,660px);display:flex;align-items:flex-end;justify-content:center}
+  height:min(74svh,640px);display:flex;align-items:flex-end;justify-content:center}
 .arch{
   position:absolute;bottom:14%;left:50%;transform:translateX(-50%);
   width:min(102%,540px);aspect-ratio:1;border-radius:50%;
@@ -309,13 +310,16 @@ html[data-theme="dark"] .arch{
 .hero-role .dash{width:26px;height:2px;background:var(--acc);flex:none}
 .role-rot{display:inline-block;transition:opacity .3s var(--ease), transform .3s var(--ease)}
 .role-rot.out{opacity:0;transform:translateY(-6px)}
-.hero-tag{font-size:15.5px;line-height:1.55;color:var(--ink-2);max-width:30ch}
+.hero-tag{font-size:15.5px;line-height:1.55;color:var(--ink-2);max-width:26ch}
 .hero-right .btn{margin-top:var(--s-2)}
 
-.scroll-cue{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);z-index:2;
-  width:26px;height:42px;border:2px solid var(--ink-3);border-radius:14px;display:grid;justify-items:center;padding-top:7px}
-.scroll-cue span{width:4px;height:8px;border-radius:2px;background:var(--acc);animation:cue 1.6s ease-in-out infinite}
-@keyframes cue{0%{opacity:0;transform:translateY(-4px)}40%{opacity:1}100%{opacity:0;transform:translateY(10px)}}
+.hire-btn{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:5;
+  display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:16px;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:13px 26px;
+  box-shadow:var(--shadow-lg);transition:transform .18s var(--ease), box-shadow .18s}
+.hire-btn:hover{transform:translateX(-50%) translateY(-3px);box-shadow:0 20px 40px -16px var(--acc)}
+.hire-btn span{color:var(--warm);transition:transform .18s var(--ease)}
+.hire-btn:hover span{transform:translateX(5px)}
 
 @media (max-width:960px){
   .hero{min-height:auto;padding-top:calc(var(--nav-h,96px) + var(--s-6))}
