@@ -1,0 +1,253 @@
+{
+  "_meta": {
+    "purpose": "Single source of truth for all portfolio records, extracted verbatim from the v1 site (index.html @ commit 651e96c) before the full redesign.",
+    "note": "Copy is preserved AS-IS from v1. The redesign will rewrite wording — edit the `rewritten` fields, never delete the `v1` originals, so nothing is lost.",
+    "extracted": "2026-08-13",
+    "sourceCommit": "651e96c"
+  },
+
+  "identity": {
+    "name": "Sachin Gautam",
+    "tagline_v1": "Systems • Engineering • Growth",
+    "roles_v1": ["Software Engineer", "System Architect", "Growth Leader"],
+    "location": "New Delhi, India",
+    "motto_v1": "Everyday push yourself to break the wall.",
+    "heroDesc_v1": "I design and work on systems where performance, reliability, and scale actually matter. Code is just a tool — outcomes, stability, and users come first.",
+    "bio_v1": "I'm an engineering student who enjoys building things that actually work in the real world. My experience spans software systems, operations, and leadership — from deployments and startups to campus-scale coordination. I believe in the power of technology to transform ideas into reality.",
+    "pitch_v1": "I bring a blend of strong engineering foundations (DSA, OOP, System Design) and practical growth-oriented mindset. Whether it's scaling a startup from 0 to 1 or optimizing complex systems at an enterprise level, I am ready to deliver impact."
+  },
+
+  "contact": {
+    "email": "Sachin.gautam8292@gmail.com",
+    "linkedin": "https://linkedin.com/in/sachin-gautam-1484a2227/",
+    "github": "https://github.com/sach-gtm",
+    "twitter": "https://twitter.com/sachgtm",
+    "resume": "asset/Sachin Resume All.pdf",
+    "liveSite": "https://portfolio-flax-eta-14.vercel.app/"
+  },
+
+  "pillars_v1": [
+    { "title": "Systems Builder", "desc": "I enjoy working on software and systems where reliability, scale, and clarity matter more than flashy features." },
+    { "title": "Problem Solver", "desc": "I break down complex problems, understand how things fail, and fix them in a way that lasts — not just patches." },
+    { "title": "Execution & Leadership", "desc": "I've led teams, coordinated stakeholders, and taken responsibility for outcomes — whether in placements, events, or projects." },
+    { "title": "Product Mindset", "desc": "I care about how users experience a system — from workflows and performance to simplicity and usability." }
+  ],
+
+  "_v2AddedFacts": {
+    "_note": "Provided by Sachin on 2026-08-13, not present anywhere in the v1 site. These reframe the whole positioning — StaplerLabs and the hackathon record now lead. Each still needs the detail flagged below.",
+    "status": "CS pre-final year student",
+    "staplerLabs": {
+      "role": "Running / Director",
+      "company": "StaplerLabs",
+      "type": "Tech consulting firm",
+      "markets": ["EdTech", "Healthcare / doctors"],
+      "claim": "Built many market solutions, especially for the EdTech and doctor markets",
+      "brandKit": { "navy": "#0D2545", "yellow": "#F5C400", "cream": "#F2F0EB", "ink": "#111827", "muted": "#6B6B6B" },
+      "_needed": ["Founded date", "Team size", "Exact title (Director / Founder / both)", "Product names + one-line description each", "One shareable metric (clinics live, students reached, clients shipped, revenue band)", "Public URLs"]
+    },
+    "hackathons": {
+      "record": "3× winner or runner-up",
+      "known": ["Winner — Coding Ninjas Inter-Campus Hackathon (from v1)"],
+      "mentorship": "Mentors at many hackathons; mentored one at Paytm",
+      "_needed": ["Names, years and placement for all 3 results", "What was built in each", "Paytm event name + date + mentor-or-judge", "Total count of hackathons mentored and which"]
+    }
+  },
+
+  "experience": [
+    {
+      "id": "unicorn-denmart",
+      "role": "Software Support Engineer",
+      "company": "Unicorn Denmart",
+      "type": "Full-Time",
+      "start": "2024-06",
+      "end": "2024-11",
+      "dateLabel": "Jun 2024 – Nov 2024",
+      "location": "PAN India",
+      "summary": "Delivered end-to-end software installations and on-site troubleshooting for medical devices, focusing on reliability, uptime, and user adoption in real clinical environments.",
+      "bullets": [
+        "Reduced machine downtime by 40% through structured troubleshooting",
+        "Maintained 98% customer satisfaction across deployments",
+        "Managed PAN-India engineer allocation for installations and upgrades",
+        "Trained doctors and clinical staff on software workflows and basic diagnostics",
+        "Performed quality assurance testing for intraoral scanners before release"
+      ],
+      "logo": "asset/Images/logos/unicorn.png"
+    },
+    {
+      "id": "darsa-ai",
+      "role": "Technical Client Support Intern",
+      "company": "Darsa AI",
+      "type": "Internship",
+      "start": "2023-06",
+      "end": "2023-11",
+      "dateLabel": "Jun 2023 – Nov 2023",
+      "location": "Hyderabad / Remote",
+      "summary": "Worked closely with engineering teams to analyze and resolve client issues related to AI-based alert generation systems in production environments.",
+      "bullets": [
+        "Investigated and resolved client-reported AI alert issues",
+        "Collaborated on deployment of 3 production fixes",
+        "Reduced average issue resolution time from 4 days to 1 day",
+        "Improved clarity between client reports and engineering implementation"
+      ],
+      "logo": "asset/Images/logos/darsa.png"
+    },
+    {
+      "id": "aai",
+      "role": "Technical Trainee",
+      "company": "Airports Authority of India (AAI)",
+      "type": "Trainee",
+      "start": "2023-08",
+      "end": "2023-08",
+      "dateLabel": "Aug 2023",
+      "location": "India",
+      "summary": "Supported documentation and internal system updates within a compliance-driven aviation environment, gaining exposure to large-scale infrastructure operations.",
+      "bullets": [
+        "Updated technical documentation for internal and public-facing systems",
+        "Assisted in usability audits and workflow accuracy checks",
+        "Gained hands-on exposure to structured, regulation-heavy systems"
+      ],
+      "logo": "asset/Images/logos/airport.png"
+    }
+  ],
+
+  "_experienceOpenQuestion": "The v1 timeline and meta description both claim 'Samsung R&D — Project Trainee, 2024', but no Samsung entry exists in the Work Experience section. CONFIRM whether this is real before the rebuild: if real, add a full entry here; if not, remove it from the timeline too.",
+
+  "education": [
+    {
+      "institution": "Maharaja Agrasen Institute of Technology, GGSIPU",
+      "short": "MAIT",
+      "program": "Computer Science & Technology",
+      "period": "2025-28 (Expected)",
+      "url": "https://mait.ac.in/",
+      "logo": "asset/Images/Education/mait.png"
+    },
+    {
+      "institution": "Delhi Skill and Entrepreneurship University",
+      "short": "DSEU",
+      "program": "Full time Diploma in Computer Engineering",
+      "period": "2021-24",
+      "url": "https://dseu.ac.in",
+      "logo": "asset/Images/Education/dseu.png"
+    }
+  ],
+
+  "timeline": [
+    { "year": "2021", "title": "10th Grade", "desc": "Foundation established." },
+    { "year": "2021", "title": "Diploma Start", "desc": "Entered the world of engineering." },
+    { "year": "2024", "title": "Diploma Completed", "desc": "Graduated with distinction." },
+    { "year": "2024", "title": "Unicorn Denmart", "desc": "Software Support Engineer." },
+    { "year": "2024", "title": "Samsung R&D", "desc": "Project Trainee.", "_flag": "UNVERIFIED — see _experienceOpenQuestion" },
+    { "year": "2025", "title": "MAIT B.Tech", "desc": "Advancing Computer Science." },
+    { "year": "2026", "title": "Startup Builder", "desc": "Building the next big thing.", "current": true }
+  ],
+
+  "skills": {
+    "Languages": ["C++ (Basic)", "Java"],
+    "Web Technologies": ["HTML", "CSS3", "JavaScript (ES6)"],
+    "Backend & DBMS": ["Node.js", "SQL"],
+    "Developer Tools": ["Git", "GitHub", "VS Code", "Postman"],
+    "Core CS Concepts": ["DSA", "OOP", "DBMS", "OS Basics", "Computer Networks"],
+    "Other Tools": ["MS Office (Advanced)", "WordPress"],
+    "Additional Skills": ["Technical Documentation", "Content Writing"]
+  },
+
+  "achievements": [
+    { "icon": "🏛️", "badge": "Leadership", "title": "G20 Inter-University Representation", "desc": "Represented my college at the G20 Inter-University Group Discussion, securing 2nd position. Contributed to national-level dialogue and improved institutional visibility." },
+    { "icon": "🎯", "badge": "Leadership", "title": "Campus Event Leadership", "desc": "Led planning and execution of multiple college events with 5,000+ total footfall. Managed 40+ volunteers, logistics, and on-ground coordination." },
+    { "icon": "💰", "badge": "Business", "title": "Sponsorship & External Partnerships", "desc": "Independently brought in ₹1 Lakh+ sponsorships from brands including TVS, StockGrow, and Unacademy, handling outreach and negotiations." },
+    { "icon": "🛒", "badge": "Coordination", "title": "Amazon Smbhav – Event Coordination", "desc": "Coordinated the Amazon Smbhav initiative at the campus level, leading a team of 20+ coordinators and ensuring smooth execution." },
+    { "icon": "🌍", "badge": "Social Impact", "title": "National Service Scheme – National Camp", "desc": "Represented Delhi State at a 7-day national-level NSS camp, working with teams from 24+ states on social and leadership initiatives." },
+    { "icon": "🧑‍💼", "badge": "Leadership", "title": "President, Placement Cell – DSEU", "desc": "Led campus placement operations, coordinated with recruiters, and streamlined student-company engagement. Took ownership of execution, communication, and placement readiness initiatives.", "logo": "asset/Images/logos/placement.png" },
+    { "icon": "🤝", "badge": "Corporate Relations", "title": "Corporate Relations Team Member – MAIT", "desc": "Worked as part of the Placement Cell's Corporate Relations Team, supporting employer outreach, coordination, and recruitment process execution." },
+    { "icon": "🚀", "badge": "Entrepreneurship", "title": "Co-Founder, Entrepreneurship Cell – DSEU Dwarka", "desc": "Co-founded the campus Entrepreneurship Cell and led initiatives promoting startup culture. Mentored student teams and organized innovation-driven events to boost participation and ideation.", "logo": "asset/Images/logos/ecell.png" },
+    { "icon": "📈", "badge": "Management", "title": "President, Management & Marketing Club", "desc": "Directed planning and execution of large-scale college events, including Foundation Day. Improved outreach strategy, engagement, and operational efficiency through structured coordination." },
+    { "icon": "🏆", "badge": "Hackathon", "title": "Winner – Coding Ninjas Inter-Campus Hackathon", "desc": "Won the Coding Ninjas Inter-Campus Hackathon by developing a practical, problem-focused solution. Recognized for strong implementation, logic, and teamwork under time constraints." }
+  ],
+
+  "certifications": [
+    { "title": "HackerRank Basic SQL", "desc": "Earned technical certifications in SQL.", "image": "asset/Images/Certificates/sql.png" },
+    { "title": "HackerRank Javascript", "desc": "Earned technical certifications in JavaScript.", "image": "asset/Images/Certificates/js.png" },
+    { "title": "English Spoken B2 Level", "desc": "In collab with Cambridge University and DSEU.", "image": "asset/Images/Certificates/english.png" },
+    { "title": "NSS Special Camp", "desc": "Represented Delhi state at national level camp of 7 days with team of 6 members.", "image": "asset/Images/Certificates/nss.png" }
+  ],
+
+  "projects": {
+    "web": [
+      {
+        "title": "NGO Website",
+        "desc": "A dedicated platform for social impact and community driving initiatives.",
+        "images": ["asset/Images/projects/ngo/dekstop.jpg", "asset/Images/projects/ngo/mobile.jpg"],
+        "liveUrl": null,
+        "repoUrl": null,
+        "videoUrl": null,
+        "_flag": "v1 had all three links as href='#'. NEEDS REAL URLs + tech stack + outcome before rebuild."
+      }
+    ],
+    "iot": [
+      {
+        "title": "Eysonic",
+        "desc": "Advanced ultrasonic sensor system for visually impaired assistance.",
+        "images": ["asset/Images/projects/eysonic.jpg", "asset/Images/IoT/1.jpg"],
+        "_flag": "v1 pointed at asset/Images/IoT/eysonic.jpg which 404s. Correct path is asset/Images/projects/eysonic.jpg."
+      }
+    ],
+    "_gap": "Only 2 projects total. This is the weakest section for an engineering role — the rebuild needs more, with real links, stack, and measurable outcomes."
+  },
+
+  "currentlyWorkingOn": [
+    { "title": "Building a startup from the ground up", "desc": "Working toward a ₹12 lakh revenue target in 12 months, focusing on execution, market fit, and scalable operations." },
+    { "title": "Helping businesses grow online", "desc": "Working as a freelancer to take offline brands online, build their websites, and run performance-driven digital marketing campaigns across e-commerce and quick-commerce platforms." },
+    { "title": "Strengthening core engineering skills", "desc": "Actively working on DSA, system performance optimization, and preparing for research-oriented problem solving." }
+  ],
+
+  "services_v1": {
+    "note": "From the v1 'Book 1:1 Session' form topic dropdown.",
+    "sessionTopics": ["Branding", "Marketing", "Career Guidance", "Skill Enhancement"]
+  },
+
+  "impactWall": {
+    "heading_v1": "Wall of Proof",
+    "subheading_v1": "Systems I have touched. How I think.",
+    "images": [
+      "asset/Images/Impact/1.jpg", "asset/Images/Impact/2.jpg", "asset/Images/Impact/3.jpg",
+      "asset/Images/Impact/4.jpg", "asset/Images/Impact/5.jpg", "asset/Images/Impact/6.jpg",
+      "asset/Images/Impact/7.jpg", "asset/Images/Impact/8.jpg", "asset/Images/Impact/9.jpg",
+      "asset/Images/Impact/10.jpg"
+    ],
+    "_flag": "All 10 shipped with no alt text in v1. Each needs a caption describing what it shows."
+  },
+
+  "v1DesignTokens": {
+    "note": "Kept for reference only — the redesign is free to replace these entirely.",
+    "fonts": { "main": "Inter", "mono": "JetBrains Mono" },
+    "dark": {
+      "bg": "#09090b", "bgDarker": "#020617",
+      "textPrimary": "#fafafa", "textSecondary": "#a1a1aa", "textMuted": "#71717a",
+      "accentPrimary": "#6366f1", "accentSecondary": "#8b5cf6", "accentPink": "#d946ef"
+    },
+    "light": {
+      "bg": "#fafafa", "bgDarker": "#ffffff",
+      "textPrimary": "#09090b", "textSecondary": "#52525b", "textMuted": "#71717a",
+      "accentPrimary": "#4f46e5", "accentSecondary": "#7c3aed", "accentPink": "#c026d3"
+    },
+    "navHeight": "80px"
+  },
+
+  "v1Sections": [
+    "Navbar (logo, resume link, nav links, theme toggle, Hire Me)",
+    "Hero (photo, name, roles, description, 2 CTAs)",
+    "About Me (bio + 4 pillar cards)",
+    "Technical Proficiency (7 skill categories)",
+    "Certifications (banner → modal)",
+    "Education (2 entries)",
+    "Work Experience (3 entries)",
+    "My Journey (vertical timeline, 7 nodes)",
+    "Currently Working On (3 items)",
+    "Projects (Web banner → modal, IoT banner → modal)",
+    "Wall of Proof (impact marquee → modal)",
+    "Achievements & Recognition (10 cards, horizontal scroll)",
+    "Hire Me (CTA block)",
+    "Get In Touch (info card + message form + 1:1 session booking)",
+    "Footer (brand, social icons, copyright)"
+  ]
+}

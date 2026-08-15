@@ -1,1015 +1,593 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sachin Gautam | Systems • Engineering • Growth</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+
+  <title>Sachin Gautam — Software Engineer</title>
   <meta name="description"
-    content="Portfolio of Sachin Gautam, a Software Engineer specializing in scalable systems, growth, and leadership. Experience with DSEU, Samsung R&D, and startups.">
-  <meta name="keywords"
-    content="Sachin Gautam, Software Engineer, Portfolio, Systems Engineering, Web Development, React, Node.js">
-  <meta name="author" content="Sachin Gautam">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    content="Software engineer in New Delhi. Director at StaplerLabs, building software for the EdTech and healthcare markets. Cut medical-device downtime 40% across PAN-India deployments and issue resolution from 4 days to 1.">
+  <link rel="canonical" href="https://portfolio-flax-eta-14.vercel.app/">
 
-  <!-- Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
-    rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portfolio-flax-eta-14.vercel.app/">
+  <meta property="og:title" content="Sachin Gautam — Software Engineer">
+  <meta property="og:description"
+    content="Director at StaplerLabs. I build software for the EdTech and healthcare markets — and I've supported it in the field.">
+  <meta property="og:image" content="https://portfolio-flax-eta-14.vercel.app/asset/Images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@sachgtm">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="asset/CSS/style.css">
+  <link rel="icon" href="asset/Images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="asset/Images/logos/logo.png" sizes="any" type="image/png">
+  <link rel="apple-touch-icon" href="asset/Images/logos/logo.png">
+  <link rel="stylesheet" href="asset/CSS/main.css">
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="asset/Images/logos/logo.png?v=2">
-  <link rel="icon" type="image/png" sizes="16x16" href="asset/Images/logos/logo.png?v=2">
-  <link rel="apple-touch-icon" sizes="180x180" href="asset/Images/logos/logo.png?v=2">
-  <link rel="shortcut icon" href="asset/Images/logos/logo.png?v=2">
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org","@type":"Person","name":"Sachin Gautam",
+    "jobTitle":"Software Engineer","url":"https://portfolio-flax-eta-14.vercel.app/",
+    "email":"mailto:Sachin.gautam8292@gmail.com",
+    "address":{"@type":"PostalAddress","addressLocality":"New Delhi","addressCountry":"IN"},
+    "alumniOf":[{"@type":"CollegeOrUniversity","name":"Maharaja Agrasen Institute of Technology"},
+                {"@type":"CollegeOrUniversity","name":"Delhi Skill and Entrepreneurship University"}],
+    "worksFor":{"@type":"Organization","name":"StaplerLabs"},
+    "sameAs":["https://linkedin.com/in/sachin-gautam-1484a2227/","https://github.com/sach-gtm","https://twitter.com/sachgtm"]
+  }
+  </script>
 </head>
 
-<body class="dark">
-  <div id="bg-canvas"></div>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-  <!-- ================= NAVBAR ================= -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <div class="logo-container">
-        <img src="asset/Images/logos/logo.png?v=2" alt="Logo">
-      </div>
-      <a class="resume-nav-link" href="asset/Sachin Resume All.pdf" target="_blank">Resume</a>
-    </div>
-    <div class="nav-center">
-      <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a class="nav-brand" href="#top">
+      <span class="brand-mark" aria-hidden="true">SG</span>
+      <span class="brand-name">Sachin Gautam</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#hackathons">Hackathons</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <div class="nav-right">
-      <button id="themeToggle" aria-label="Toggle Theme"><img src="asset/Images/logos/lightmode.png"
-          alt="Theme Icon"></button>
-      <a class="btn primary-btn" href="#hire-me">Hire Me</a>
-      <button class="mobile-menu-btn" aria-label="Open Menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <span class="status" title="Currently available"><i></i>Open to work</span>
+      <button class="icon-btn" id="themeBtn" aria-label="Switch theme" type="button">
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.6M12 19.4V22M4.9 4.9l1.9 1.9M17.2 17.2l1.9 1.9M2 12h2.6M19.4 12H22M4.9 19.1l1.9-1.9M17.2 6.8l1.9-1.9"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2z"/></svg>
+      </button>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" type="button">
+        <span></span><span></span>
       </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- ================= HERO ================= -->
-  <section id="home" class="hero centered-hero">
-    <div class="hero-image-container">
-      <img src="asset/Images/profile/hero.jpeg" alt="Sachin Gautam" class="profile-circle glowing-border">
-    </div>
-    <div class="hero-content">
-      <h1 class="hero-name">Sachin <span class="text-accent">Gautam</span></h1>
-      <h2 class="hero-role-text">
-        <span class="typing-text">Software Engineer</span> | <span class="text-gradient">System Architect</span> | <span
-          class="text-dim">Growth Leader</span>
-      </h2>
-      <p class="hero-desc">
-        I design and work on systems where performance, reliability, and scale actually matter.
-        Code is just a tool — outcomes, stability, and users come first.
-      </p>
+  <main id="main">
+    <span id="top"></span>
 
-      <div class="hero-actions center-actions">
-        <a href="#projects" class="btn primary glow-btn">View Projects</a>
-        <a href="#contact" class="btn outline dim-btn">Get In Touch</a>
-      </div>
-    </div>
-  </section>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="clouds" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
-  <!-- ================= ABOUT ME (New Section) ================= -->
-  <section id="about" class="about-section">
-    <h2 class="section-title">About <span class="text-accent">Me</span></h2>
-    <div class="about-container">
-
-      <p class="about-bio">
-        I’m an engineering student who enjoys building things that actually work in the real world.
-        My experience spans software systems, operations, and leadership — from deployments and startups to campus-scale
-        coordination.
-        I believe in the power of technology to transform ideas into reality.
-      </p>
-
-      <div class="about-grid">
-        <!-- Card 1 -->
-        <div class="about-card">
-          <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-          </div>
-          <h3>Systems Builder</h3>
-          <p>I enjoy working on software and systems where reliability, scale, and clarity matter more than flashy
-            features.</p>
+      <div class="hero-inner">
+        <!-- left: the signature line -->
+        <div class="hero-left">
+          <span class="hello reveal"><i></i> Hello There</span>
+          <h1 class="hero-title">
+            <span class="ln"><span>I&rsquo;m a</span></span>
+            <span class="ln"><span class="accent">Coder.</span></span>
+          </h1>
         </div>
 
-        <!-- Card 2 -->
-        <div class="about-card active-card">
-          <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path
-                d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z">
-              </path>
-            </svg>
-          </div>
-          <h3>Problem Solver</h3>
-          <p>I break down complex problems, understand how things fail, and fix them in a way that lasts — not just
-            patches.</p>
+        <!-- centre: arch + figure + floating 3D orb -->
+        <div class="hero-stage" id="stage">
+          <div class="arch" data-depth="6" aria-hidden="true"></div>
+          <div class="arch-glow" aria-hidden="true"></div>
+          <span class="float-badge fb-1" data-depth="26" aria-hidden="true">&lt;/&gt;</span>
+          <span class="float-badge fb-2" data-depth="-20" aria-hidden="true">&#9889;</span>
+          <img class="hero-figure" data-depth="12" src="asset/Images/profile/cutout-hero.webp"
+               alt="Sachin Gautam" width="395" height="1148" fetchpriority="high" decoding="async">
+          <span class="float-badge fb-3" data-depth="30" aria-hidden="true">&#127968;</span>
         </div>
 
-        <!-- Card 3 -->
-        <div class="about-card">
-          <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z">
-              </path>
-              <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z">
-              </path>
-              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-            </svg>
-          </div>
-          <h3>Execution & Leadership</h3>
-          <p>I’ve led teams, coordinated stakeholders, and taken responsibility for outcomes — whether in placements,
-            events, or projects.</p>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="about-card">
-          <div class="card-icon">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
-            </svg>
-          </div>
-          <h3>Product Mindset</h3>
-          <p>I care about how users experience a system — from workflows and performance to simplicity and usability.
-          </p>
+        <!-- right: who + what -->
+        <div class="hero-right">
+          <p class="hero-name reveal">Sachin<br>Gautam</p>
+          <p class="hero-role reveal"><span class="dash"></span><span>Software Engineer</span></p>
+          <p class="hero-tag reveal">Clean, reliable software for classrooms and clinics &mdash;
+            built to be used every day.</p>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- ================= SKILLS (New Horizontal Marquee) ================= -->
-  <!-- ================= SKILLS (Split Layout) ================= -->
-  <section id="skills" class="skills-section">
-    <h2 class="section-title">Technical <span class="text-accent">Proficiency</span></h2>
+      <a class="hire-btn reveal" href="#contact">Hire Me <span aria-hidden="true">&rarr;</span></a>
+    </section>
 
-    <div class="skills-wrapper">
-      <!-- Left: Skill Categories -->
-      <div class="skills-list">
-
-        <!-- 1. Languages -->
-        <div class="skill-category">
-          <div class="category-header">
-            <h3><span class="code-icon">💻</span> Languages</h3>
-          </div>
-          <div class="skill-cards-grid">
-            <div class="skill-card"><span>🔵 C++ (Basic)</span></div>
-            <div class="skill-card"><span>☕ Java</span></div>
-
-          </div>
-        </div>
-
-        <!-- 2. Web Technologies -->
-        <div class="skill-category">
-          <div class="category-header">
-            <h3><span class="code-icon">🌐</span> Web Technologies</h3>
-          </div>
-          <div class="skill-cards-grid">
-            <div class="skill-card"><span>🌐 HTML</span></div>
-            <div class="skill-card"><span>🎨 CSS3</span></div>
-            <div class="skill-card"><span>📜 JavaScript (ES6)</span></div>
-          </div>
-        </div>
-
-        <!-- 3. Backend & DBMS -->
-        <div class="skill-category">
-          <div class="category-header">
-            <h3><span class="code-icon">🗄️</span> Backend & DBMS</h3>
-          </div>
-          <div class="skill-cards-grid">
-            <div class="skill-card"><span>🟢 Node.js</span></div>
-            <div class="skill-card"><span>🗄️ SQL</span></div>
-          </div>
-        </div>
-
-        <!-- 4. Developer Tools -->
-        <div class="skill-category">
-          <div class="category-header">
-            <h3><span class="code-icon">🛠️</span> Developer Tools</h3>
-          </div>
-          <div class="skill-cards-grid">
-            <div class="skill-card"><span>🔧 Git</span></div>
-            <div class="skill-card"><span>🐙 GitHub</span></div>
-            <div class="skill-card"><span>💻 VS Code</span></div>
-            <div class="skill-card"><span>🚀 Postman</span></div>
-          </div>
-        </div>
-
-        <!-- 5. Core CS Concepts -->
-        <div class="skill-category">
-          <div class="category-header">
-            <h3><span class="code-icon">🧠</span> Core CS Concepts</h3>
-          </div>
-          <div class="skill-cards-grid">
-            <div class="skill-card"><span>🧩 DSA</span></div>
-            <div class="skill-card"><span>🧱 OOP</span></div>
-            <div class="skill-card"><span>💾 DBMS</span></div>
-            <div class="skill-card"><span>🖥️ OS Basics</span></div>
-            <div class="skill-card"><span>🔗 Computer Networks</span></div>
-          </div>
-        </div>
-
-        <!-- 6. Other Tools -->
-        <div class="skill-category">
-          <div class="category-header">
-            <h3><span class="code-icon">📊</span> Other Tools</h3>
-          </div>
-          <div class="skill-cards-grid">
-            <div class="skill-card"><span>📊 MS Office (Advanced)</span></div>
-            <div class="skill-card"><span>📝 WordPress</span></div>
-          </div>
-        </div>
-
-        <!-- 7. Additional Skills -->
-        <div class="skill-category">
-          <div class="category-header">
-            <h3><span class="code-icon">✍️</span> Additional Skills</h3>
-          </div>
-          <div class="skill-cards-grid">
-            <div class="skill-card"><span>📄 Technical Documentation</span></div>
-            <div class="skill-card"><span>✍️ Content Writing</span></div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Chart Removed -->
-    </div>
-  </section>
-
-  <!-- ================= CERTIFICATIONS ================= -->
-  <section id="certifications" class="cert-section">
-    <div class="cert-banner" onclick="openModal('certModal')">
-      <h3>View Certifications & Achievements</h3>
-      <img src="asset/Images/Certificates/Certificates banner.png" alt="Sachin Gautam">
-      <p>Click to explore validated skills & national representations</p>
-    </div>
-  </section>
-
-  <!-- ================= EDUCATION ================= -->
-  <section id="education">
-    <h2 class="section-title">Education</h2>
-    <div class="edu-grid">
-      <div class="edu-item">
-        <div class="edu-logo">
-          <img src="asset/Images/Education/mait.png" alt="MAIT" onerror="this.src='https://via.placeholder.com/60'">
-        </div>
-        <div class="edu-details">
-          <a href="https://mait.ac.in/" target="_blank">
-            <h3>Maharaja Agrasen Institute of Technology, GGSIPU</h3>
-          </a>
-          <p>Computer Science & Technology</p>
-        </div>
-        <div class="edu-year">2025-28(Expected)</div>
-      </div>
-
-      <div class="edu-item">
-        <div class="edu-logo">
-          <img src="asset/Images/Education/dseu.png" alt="DSEU" onerror="this.src='https://via.placeholder.com/60'">
-        </div>
-        <div class="edu-details">
-          <a href="https://dseu.ac.in" target="_blank">
-            <h3>Delhi Skill and Entrepreneurship University</h3>
-          </a>
-          <p>Full time Diploma in Computer Engineering</p>
-        </div>
-        <div class="edu-year">2021-24</div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ================= WORK EXPERIENCE ================= -->
-  <section id="experience" class="experience-section">
-    <h2 class="section-title">Work <span class="text-accent">Experience</span></h2>
-    <p class="section-desc">My professional journey and key contributions</p>
-
-    <div class="experience-container">
-
-      <!-- Job 1: Unicorn Denmart -->
-      <div class="exp-card">
-        <div class="exp-header">
-          <h3 class="exp-title">🧑‍💻 Software Support Engineer</h3>
-          <span class="exp-badge">Full-Time</span>
-        </div>
-        <div class="exp-company">Unicorn Denmart</div>
-        <div class="exp-meta">
-          <span>🗓 Jun 2024 – Nov 2024</span>
-          <span>📍 PAN India</span>
-        </div>
-        <p class="exp-desc">Delivered end-to-end software installations and on-site troubleshooting for medical devices,
-          focusing on reliability, uptime, and user adoption in real clinical environments.</p>
-        <ul class="exp-bullets">
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Reduced machine downtime by 40% through structured troubleshooting</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Maintained 98% customer satisfaction across deployments</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Managed PAN-India engineer allocation for installations and upgrades</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Trained doctors and clinical staff on software workflows and basic diagnostics</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Performed quality assurance testing for intraoral scanners before release</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Job 2: Darsa AI -->
-      <div class="exp-card">
-        <div class="exp-header">
-          <h3 class="exp-title">🤖 Technical Client Support Intern</h3>
-          <span class="exp-badge">Internship</span>
-        </div>
-        <div class="exp-company">Darsa AI (Remote)</div>
-        <div class="exp-meta">
-          <span>🗓 Jun 2023 – Nov 2023</span>
-          <span>📍 Hyderabad / Remote</span>
-        </div>
-        <p class="exp-desc">Worked closely with engineering teams to analyze and resolve client issues related to
-          AI-based alert generation systems in production environments.</p>
-        <ul class="exp-bullets">
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Investigated and resolved client-reported AI alert issues</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Collaborated on deployment of 3 production fixes</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Reduced average issue resolution time from 4 days to 1 day</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Improved clarity between client reports and engineering implementation</span>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Job 3: AAI -->
-      <div class="exp-card">
-        <div class="exp-header">
-          <h3 class="exp-title">✈️ Technical Trainee</h3>
-          <span class="exp-badge">Trainee</span>
-        </div>
-        <div class="exp-company">Airports Authority of India (AAI)</div>
-        <div class="exp-meta">
-          <span>🗓 Aug 2023</span>
-          <span>📍 India</span>
-        </div>
-        <p class="exp-desc">Supported documentation and internal system updates within a compliance-driven aviation
-          environment, gaining exposure to large-scale infrastructure operations.</p>
-        <ul class="exp-bullets">
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Updated technical documentation for internal and public-facing systems</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Assisted in usability audits and workflow accuracy checks</span>
-          </li>
-          <li>
-            <span class="bullet-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg></span>
-            <span>Gained hands-on exposure to structured, regulation-heavy systems</span>
-          </li>
-        </ul>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= TIMELINE GRAPH (Vertical Tech Tree) ================= -->
-  <section id="timeline-section" class="creative-timeline">
-    <h2>My Journey</h2>
-    <div class="vertical-timeline">
-
-      <div class="v-path-line"></div>
-
-      <!-- Item 1: 2021 -->
-      <div class="v-item left">
-        <div class="v-content">
-          <span class="v-year">2021</span>
-          <h3>10th Grade</h3>
-          <p>Foundation established.</p>
-        </div>
-        <div class="v-point"></div>
-      </div>
-
-      <!-- Item 2: 2021 -->
-      <div class="v-item right">
-        <div class="v-content">
-          <span class="v-year">2021</span>
-          <h3>Diploma Start</h3>
-          <p>Entered the world of engineering.</p>
-        </div>
-        <div class="v-point"></div>
-      </div>
-
-      <!-- Item 3: 2024 -->
-      <div class="v-item left">
-        <div class="v-content">
-          <span class="v-year">2024</span>
-          <h3>Diploma Completed</h3>
-          <p>Graduated with distinction.</p>
-        </div>
-        <div class="v-point"></div>
-      </div>
-
-      <!-- Item 4: 2024 Work -->
-      <div class="v-item right">
-        <div class="v-content">
-          <span class="v-year">2024</span>
-          <h3>Unicorn Denmart</h3>
-          <p>Software Support Engineer.</p>
-        </div>
-        <div class="v-point"></div>
-      </div>
-
-      <!-- Item 5: 2024 Work -->
-      <div class="v-item left">
-        <div class="v-content">
-          <span class="v-year">2024</span>
-          <h3>Samsung R&D</h3>
-          <p>Project Trainee.</p>
-        </div>
-        <div class="v-point"></div>
-      </div>
-
-      <!-- Item 6: 2025 -->
-      <div class="v-item right">
-        <div class="v-content">
-          <span class="v-year">2025</span>
-          <h3>MAIT B.Tech</h3>
-          <p>Advancing Computer Science.</p>
-        </div>
-        <div class="v-point"></div>
-      </div>
-
-      <!-- Item 7: 2026 -->
-      <div class="v-item left active">
-        <div class="v-content">
-          <span class="v-year">2026</span>
-          <h3>Startup Builder</h3>
-          <p>Building the next big thing.</p>
-        </div>
-        <div class="v-point"></div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ================= CURRENTLY WORKING (Animated) ================= -->
-  <section class="current-work-section enhanced animate-on-scroll">
-    <h2>Currently Working On</h2>
-    <div class="work-grid">
-      <div class="work-item">
-        <h3>Building a startup from the ground up</h3>
-        <p>Working toward a ₹12 lakh revenue target in 12 months, focusing on execution, market fit, and scalable
-          operations.</p>
-      </div>
-      <div class="work-item">
-        <h3>Helping businesses grow online</h3>
-        <p>Working as a freelancer to take offline brands online, build their websites, and run performance-driven
-          digital marketing campaigns across e-commerce and quick-commerce platforms.</p>
-      </div>
-      <div class="work-item">
-        <h3>Strengthening core engineering skills</h3>
-        <p>Actively working on DSA, system performance optimization, and preparing for research-oriented problem
-          solving.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= PROJECTS ================= -->
-  <section id="projects">
-    <h2 class="section-title">Projects</h2>
-
-    <!-- Web Applications -->
-    <div class="project-category">
-      <h3>Web Applications</h3>
-      <div class="web-projects-banner" onclick="openModal('webModal')">
-        <img src="asset/Images/projects/ngo/dekstop.jpg" alt="Web Projects Banner"
-          onerror="this.src='https://via.placeholder.com/800x300?text=Web+Projects'">
-        <div class="banner-overlay">
-          <span class="banner-text">Explore Web Projects</span>
-          <span class="banner-arrow">→</span>
-        </div>
+    <!-- ============ TICKER ============ -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>3× HACKATHON WINNER</span><i></i><span>40% DOWNTIME CUT</span><i></i>
+        <span>4 DAYS → 1</span><i></i><span>₹1L+ RAISED</span><i></i><span>98% SATISFACTION</span><i></i>
+        <span>EDTECH</span><i></i><span>HEALTHCARE</span><i></i><span>MENTOR AT PAYTM</span><i></i>
+        <span>3× HACKATHON WINNER</span><i></i><span>40% DOWNTIME CUT</span><i></i>
+        <span>4 DAYS → 1</span><i></i><span>₹1L+ RAISED</span><i></i><span>98% SATISFACTION</span><i></i>
+        <span>EDTECH</span><i></i><span>HEALTHCARE</span><i></i><span>MENTOR AT PAYTM</span><i></i>
       </div>
     </div>
 
-    <!-- IoT Systems -->
-    <div class="project-category">
-      <h3>IoT Based Systems</h3>
-      <div class="iot-banner" onclick="openModal('iotModal')">
-        <img src="asset/Images/IoT/1.jpg" alt="IoT Projects Banner"
-          onerror="this.src='https:/via.placeholder.com/800x300?text=IoT+Projects'">
-        <div class="overlay"><span>View IoT Systems</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= IMPACT WALL ================= -->
-  <section id="impact">
-    <h2 class="section-title">Wall of Proof</h2>
-    <div class="impact-banner-container" onclick="openModal('impactModal')">
-      <div class="impact-marquee">
-        <div class="impact-track">
-          <!-- First set of images -->
-          <img src="asset/Images/Impact/1.jpg" alt="Impact 1">
-          <img src="asset/Images/Impact/2.jpg" alt="Impact 2">
-          <img src="asset/Images/Impact/3.jpg" alt="Impact 3">
-          <img src="asset/Images/Impact/4.jpg" alt="Impact 4">
-          <img src="asset/Images/Impact/5.jpg" alt="Impact 5">
-          <img src="asset/Images/Impact/6.jpg" alt="Impact 6">
-          <img src="asset/Images/Impact/7.jpg" alt="Impact 7">
-          <img src="asset/Images/Impact/8.jpg" alt="Impact 8">
-          <img src="asset/Images/Impact/9.jpg" alt="Impact 9">
-          <img src="asset/Images/Impact/10.jpg" alt="Impact 10">
-          <!-- Duplicate for seamless loop -->
-          <img src="asset/Images/Impact/1.jpg" alt="Impact 1">
-          <img src="asset/Images/Impact/2.jpg" alt="Impact 2">
-          <img src="asset/Images/Impact/3.jpg" alt="Impact 3">
-          <img src="asset/Images/Impact/4.jpg" alt="Impact 4">
-          <img src="asset/Images/Impact/5.jpg" alt="Impact 5">
-          <img src="asset/Images/Impact/6.jpg" alt="Impact 6">
-          <img src="asset/Images/Impact/7.jpg" alt="Impact 7">
-          <img src="asset/Images/Impact/8.jpg" alt="Impact 8">
-          <img src="asset/Images/Impact/9.jpg" alt="Impact 9">
-          <img src="asset/Images/Impact/10.jpg" alt="Impact 10">
-        </div>
-      </div>
-      <div class="impact-banner-overlay">
-        <span class="impact-cta">Click to Explore My Impact</span>
-        <span class="impact-arrow">→</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= ACHIEVEMENTS & RECOGNITION ================= -->
-  <section id="achievements" class="achievements-section">
-    <h2 class="section-title">Achievements & <span class="text-accent">Recognition</span></h2>
-    <p class="section-desc">Leadership, hackathons, and impactful contributions</p>
-
-    <div class="achievements-scroll-container">
-      <div class="achievements-track">
-
-        <!-- Card 1: G20 Representation -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🏛️</div>
-          <span class="achievement-badge">Leadership</span>
-          <h3>G20 Inter-University Representation</h3>
-          <p>Represented my college at the G20 Inter-University Group Discussion, securing 2nd position. Contributed to
-            national-level dialogue and improved institutional visibility.</p>
-        </div>
-
-        <!-- Card 2: Event Leadership -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🎯</div>
-          <span class="achievement-badge">Leadership</span>
-          <h3>Campus Event Leadership</h3>
-          <p>Led planning and execution of multiple college events with 5,000+ total footfall. Managed 40+ volunteers,
-            logistics, and on-ground coordination.</p>
-        </div>
-
-        <!-- Card 3: Sponsorship -->
-        <div class="achievement-card">
-          <div class="achievement-icon">💰</div>
-          <span class="achievement-badge">Business</span>
-          <h3>Sponsorship & External Partnerships</h3>
-          <p>Independently brought in ₹1 Lakh+ sponsorships from brands including TVS, StockGrow, and Unacademy,
-            handling outreach and negotiations.</p>
-        </div>
-
-        <!-- Card 4: Amazon Smbhav -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🛒</div>
-          <span class="achievement-badge">Coordination</span>
-          <h3>Amazon Smbhav – Event Coordination</h3>
-          <p>Coordinated the Amazon Smbhav initiative at the campus level, leading a team of 20+ coordinators and
-            ensuring smooth execution.</p>
-        </div>
-
-        <!-- Card 5: NSS National Camp -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🌍</div>
-          <span class="achievement-badge">Social Impact</span>
-          <h3>National Service Scheme – National Camp</h3>
-          <p>Represented Delhi State at a 7-day national-level NSS camp, working with teams from 24+ states on social
-            and leadership initiatives.</p>
-        </div>
-
-        <!-- Card 6: President Placement Cell -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🧑‍💼</div>
-          <span class="achievement-badge">Leadership</span>
-          <h3>President, Placement Cell – DSEU</h3>
-          <p>Led campus placement operations, coordinated with recruiters, and streamlined student-company engagement.
-            Took ownership of execution, communication, and placement readiness initiatives.</p>
-        </div>
-
-        <!-- Card 7: CRT Member -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🤝</div>
-          <span class="achievement-badge">Corporate Relations</span>
-          <h3>Corporate Relations Team Member – MAIT</h3>
-          <p>Worked as part of the Placement Cell's Corporate Relations Team, supporting employer outreach,
-            coordination, and recruitment process execution.</p>
-        </div>
-
-        <!-- Card 8: E-Cell Co-Founder -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🚀</div>
-          <span class="achievement-badge">Entrepreneurship</span>
-          <h3>Co-Founder, Entrepreneurship Cell – DSEU Dwarka</h3>
-          <p>Co-founded the campus Entrepreneurship Cell and led initiatives promoting startup culture. Mentored student
-            teams and organized innovation-driven events to boost participation and ideation.</p>
-        </div>
-
-        <!-- Card 9: President Marketing Club -->
-        <div class="achievement-card">
-          <div class="achievement-icon">📈</div>
-          <span class="achievement-badge">Management</span>
-          <h3>President, Management & Marketing Club</h3>
-          <p>Directed planning and execution of large-scale college events, including Foundation Day. Improved outreach
-            strategy, engagement, and operational efficiency through structured coordination.</p>
-        </div>
-
-        <!-- Card 10: Coding Ninjas Winner -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🏆</div>
-          <span class="achievement-badge">Hackathon</span>
-          <h3>Winner – Coding Ninjas Inter-Campus Hackathon</h3>
-          <p>Won the Coding Ninjas Inter-Campus Hackathon by developing a practical, problem-focused solution.
-            Recognized for strong implementation, logic, and teamwork under time constraints.</p>
-        </div>
-
-        <!-- Duplicate cards for seamless loop -->
-        <div class="achievement-card">
-          <div class="achievement-icon">🏛️</div>
-          <span class="achievement-badge">Leadership</span>
-          <h3>G20 Inter-University Representation</h3>
-          <p>Represented my college at the G20 Inter-University Group Discussion, securing 2nd position. Contributed to
-            national-level dialogue and improved institutional visibility.</p>
-        </div>
-
-        <div class="achievement-card">
-          <div class="achievement-icon">🎯</div>
-          <span class="achievement-badge">Leadership</span>
-          <h3>Campus Event Leadership</h3>
-          <p>Led planning and execution of multiple college events with 5,000+ total footfall. Managed 40+ volunteers,
-            logistics, and on-ground coordination.</p>
-        </div>
-
-        <div class="achievement-card">
-          <div class="achievement-icon">💰</div>
-          <span class="achievement-badge">Business</span>
-          <h3>Sponsorship & External Partnerships</h3>
-          <p>Independently brought in ₹1 Lakh+ sponsorships from brands including TVS, StockGrow, and Unacademy,
-            handling outreach and negotiations.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= BOOK SESSION ================= -->
-  <section id="session" class="session-section">
-    <!-- Session Moved to Contact Section -->
-
-    <!-- ================= HIRE ME ================= -->
-    <section id="hire-me" class="hire-me-section animate-on-scroll">
-      <div class="hire-container">
-        <h2>Let's build something extraordinary.</h2>
-        <p>
-          I bring a blend of strong engineering foundations (DSA, OOP, System Design) and practical growth-oriented
-          mindset.
-          Whether it's scaling a startup from 0 to 1 or optimizing complex systems at an enterprise level, I am ready to
-          deliver impact.
-        </p>
-        <div class="hire-actions">
-          <a href="mailto:Sachin.gautam8292@gmail.com" class="btn primary">Hire Me</a>
-          <a href="#contact" class="btn outline">Contact</a>
-        </div>
+    <!-- ============ METRICS ============ -->
+    <section class="metrics" aria-label="Key numbers">
+      <div class="wrap metrics-grid">
+        <div class="metric reveal"><span class="mv" data-to="3">0</span><span class="ml">Hackathon wins &amp; runner-ups</span></div>
+        <div class="metric reveal"><span class="mv" data-to="40" data-suffix="%">0</span><span class="ml">Machine downtime cut</span></div>
+        <div class="metric reveal"><span class="mv" data-to="4" data-transform="→1">0</span><span class="ml">Days to resolution, down to 1</span></div>
+        <div class="metric reveal"><span class="mv" data-prefix="₹" data-to="1" data-suffix="L+">0</span><span class="ml">Sponsorship raised</span></div>
+        <div class="metric reveal"><span class="mv" data-to="98" data-suffix="%">0</span><span class="ml">Customer satisfaction</span></div>
       </div>
     </section>
 
-    <!-- ================= CONTACT / FOOTER ================= -->
-    <!-- ================= CONTACT (Get In Touch) ================= -->
-    <section id="contact" class="contact-section">
-      <h2 class="section-title">Get In <span class="text-accent">Touch</span></h2>
-      <p class="section-desc">Have a project in mind or want to collaborate? Let's connect!</p>
-
-      <div class="contact-container">
-        <div class="contact-grid">
-
-          <!-- Left: Connect Info -->
-          <div class="contact-card info-card">
-            <h3>Let's Connect</h3>
-            <p class="contact-text">
-              I'm always excited to discuss new projects, creative ideas, or opportunities to be part of your vision.
-              Feel free to reach out through any of these channels!
-            </p>
-
-            <div class="contact-details">
-              <div class="contact-item">
-                <div class="icon-box">
-                  <img src="asset/Images/logos/mail.png" alt="Email" class="contact-icon-img">
-                </div>
-                <div class="contact-info">
-                  <span class="label">Email</span>
-                  <a href="mailto:Sachin.gautam8292@gmail.com" class="value">Sachin.gautam8292@gmail.com</a>
-                </div>
-              </div>
-
-              <div class="contact-item">
-                <div class="icon-box">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
-                  </svg>
-                </div>
-                <div class="contact-info">
-                  <span class="label">Location</span>
-                  <span class="value">New Delhi, India</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
+    <!-- ============ WHAT I DO ============ -->
+    <section id="work" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">What I actually do</p>
+          <h2>Classrooms and clinics</h2>
+          <p class="lede">Two worlds most engineers never touch. I build for both &mdash; and I&rsquo;m the one who picks up the phone when it breaks.</p>
         </div>
 
-        <!-- Right: Message Form -->
-        <div class="contact-card form-card">
-          <h3>Send a Message</h3>
-          <form class="contact-form" action="mailto:Sachin.gautam8292@gmail.com" method="post" enctype="text/plain">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Your Name" required class="form-input">
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Your Email" required class="form-input">
-            </div>
-            <div class="form-group">
-              <textarea name="message" placeholder="Your Message" rows="5" required class="form-input"></textarea>
-            </div>
-            <button type="submit" class="btn primary full-width glow-on-hover">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                style="margin-right:8px">
-                <line x1="22" y1="2" x2="11" y2="13"></line>
-                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+        <div class="cards-3">
+          <article class="card lift reveal">
+            <div class="illo" aria-hidden="true">
+              <!-- EdTech: stacked learning surfaces -->
+              <svg viewBox="0 0 220 150" role="img">
+                <defs>
+                  <linearGradient id="gEd" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="var(--acc)" stop-opacity=".9"/>
+                    <stop offset="1" stop-color="var(--acc)" stop-opacity=".35"/>
+                  </linearGradient>
+                </defs>
+                <rect x="34" y="30" width="152" height="88" rx="9" class="ln" fill="var(--illo-fill)"/>
+                <rect x="46" y="20" width="152" height="88" rx="9" class="ln" fill="var(--illo-fill-2)"/>
+                <rect x="58" y="10" width="152" height="88" rx="9" class="ln" fill="var(--illo-surface)"/>
+                <path d="M72 62h44M72 74h68M72 86h30" class="ln"/>
+                <rect x="72" y="26" width="52" height="24" rx="5" fill="url(#gEd)"/>
+                <circle cx="176" cy="38" r="9" class="ln"/>
+                <path d="M172 38l3 3 6-6" class="ln cap"/>
               </svg>
-              Send Message
-            </button>
-          </form>
-        </div>
-
-        <!-- 3rd: Book 1:1 Session (Integrated) -->
-        <div class="contact-card session-card-integrated">
-          <h3>Book 1:1 Session</h3>
-          <img src="asset/Images/session/robingautam.in.png" alt="Session Banner" class="session-banner-img">
-
-          <form class="book-slot-form"
-            onsubmit="event.preventDefault(); window.open('https:/calendar.google.com/calendar/u/0/r', '_blank')">
-            <div class="form-group">
-              <input type="text" placeholder="Name" required class="form-input">
-              <input type="text" placeholder="Contact No." required class="form-input">
             </div>
-            <input type="email" placeholder="Email Address" required class="form-input">
-            <select class="form-input" required>
-              <option value="" disabled selected>Select Topic</option>
-              <option value="branding">Branding</option>
-              <option value="marketing">Marketing</option>
-              <option value="career">Career Guidance</option>
-              <option value="skill">Skill Enhancement</option>
-            </select>
-            <button type="submit" class="btn primary full-width">Book Slot</button>
-          </form>
+            <h3>EdTech</h3>
+            <p>Learning tools that don&rsquo;t fall over when a whole class logs in at 9am.</p>
+          </article>
+
+          <article class="card lift reveal">
+            <div class="illo" aria-hidden="true">
+              <!-- Healthcare: device + pulse -->
+              <svg viewBox="0 0 220 150" role="img">
+                <rect x="30" y="24" width="160" height="102" rx="12" class="ln" fill="var(--illo-surface)"/>
+                <rect x="44" y="38" width="132" height="60" rx="7" fill="var(--illo-fill)" class="ln"/>
+                <path d="M52 70h20l8-18 12 38 10-24 8 12h30" class="ln cap acc-stroke" fill="none"/>
+                <circle cx="110" cy="112" r="5" class="ln"/>
+                <path d="M78 112h18M124 112h18" class="ln cap"/>
+              </svg>
+            </div>
+            <h3>Healthcare</h3>
+            <p>Software doctors trust mid-appointment &mdash; because I&rsquo;ve been the one they call.</p>
+          </article>
+
+          <article class="card lift reveal">
+            <div class="illo" aria-hidden="true">
+              <!-- Consulting: nodes resolving into order -->
+              <svg viewBox="0 0 220 150" role="img">
+                <circle cx="110" cy="75" r="46" class="ln dash"/>
+                <circle cx="110" cy="75" r="26" class="ln"/>
+                <circle cx="110" cy="75" r="9" fill="var(--acc)"/>
+                <circle cx="110" cy="29" r="6.5" class="ln" fill="var(--illo-surface)"/>
+                <circle cx="150" cy="98" r="6.5" class="ln" fill="var(--illo-surface)"/>
+                <circle cx="70" cy="98" r="6.5" class="ln" fill="var(--illo-surface)"/>
+                <path d="M110 36v30M144 95l-26-14M76 95l26-14" class="ln cap"/>
+              </svg>
+            </div>
+            <h3>Consulting</h3>
+            <p>From &ldquo;we need something built&rdquo; to something live, and still standing a year later.</p>
+          </article>
         </div>
 
-      </div>
+        <!-- TODO(Sachin): replace the three placeholder projects below with real StaplerLabs
+             products — name, market, one-line description, stack, live URL, and one outcome metric. -->
+        <div class="sec-head reveal" style="margin-top:var(--s-9)">
+          <p class="eyebrow">A few things I&rsquo;ve made</p>
+          <h2>Stuff that&rsquo;s live</h2>
+        </div>
+
+        <div class="cards-2">
+          <article class="proj lift reveal">
+            <div class="proj-media">
+              <img src="asset/Images/projects/ngo/dekstop.jpg" alt="Desktop view of the NGO website homepage"
+                   loading="lazy" decoding="async" width="800" height="450">
+            </div>
+            <div class="proj-body">
+              <div class="proj-top">
+                <h3>NGO Platform</h3>
+                <span class="tag">Web</span>
+              </div>
+              <p>Maintainable by people who don't write code.</p>
+              <ul class="stack-tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <!-- TODO(Sachin): real links -->
+              <div class="proj-links">
+                <a class="lnk" href="#contact" data-todo>Live demo <span aria-hidden="true">→</span></a>
+                <a class="lnk" href="https://github.com/sach-gtm" target="_blank" rel="noopener">Code <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj lift reveal">
+            <div class="proj-media">
+              <img src="asset/Images/projects/eysonic.jpg" alt="The Eysonic ultrasonic navigation device"
+                   loading="lazy" decoding="async" width="800" height="450">
+            </div>
+            <div class="proj-body">
+              <div class="proj-top">
+                <h3>Eysonic</h3>
+                <span class="tag">IoT</span>
+              </div>
+              <p>Obstacles mapped to haptics — felt before they're hit.</p>
+              <ul class="stack-tags"><li>Embedded C</li><li>Ultrasonic sensors</li><li>Haptics</li></ul>
+              <div class="proj-links">
+                <a class="lnk" href="#contact" data-todo>Details <span aria-hidden="true">→</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-      <div class="footer-cols">
-        <div class="footer-brand">
-          <h3>Sachin Gautam</h3>
-          <p>Everyday push yourself to break the wall.</p>
+    <!-- ============ EXPERIENCE ============ -->
+    <section id="experience" class="sec alt">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Where I learned the hard way</h2>
         </div>
-        <div class="footer-links">
-          <h4>Connect</h4>
-          <div class="social-icons">
-            <a href="mailto:Sachin.gautam8292@gmail.com" title="Gmail">
-              <img src="asset/Images/logos/mail.png" alt="Gmail">
-            </a>
-            <a href="https://linkedin.com/in/sachin-gautam-1484a2227/" target="_blank" title="LinkedIn">
-              <img src="asset/Images/logos/linkedin.png" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/sach-gtm" target="_blank" title="GitHub">
-              <img src="asset/Images/logos/git.png" alt="GitHub">
-            </a>
-            <a href="https://twitter.com/sachgtm" target="_blank" title="Twitter/X">
-              <img src="asset/Images/logos/x.png" alt="X">
-            </a>
+
+        <div class="timeline" id="timeline">
+          <span class="rail" aria-hidden="true"><i id="railFill"></i></span>
+
+          <article class="job reveal">
+            <div class="job-head">
+              <h3>Director</h3>
+              <span class="tag hot">Current</span>
+            </div>
+            <p class="job-meta">StaplerLabs · Tech consulting · New Delhi</p>
+            <p>I run a small consulting studio building real software for education and healthcare businesses &mdash; scoping it, shipping it, and owning it after.</p>
+            <!-- TODO(Sachin): founded date, team size, product names, one public metric -->
+          </article>
+
+          <article class="job reveal">
+            <div class="job-head">
+              <h3>Software Support Engineer</h3>
+              <span class="tag">Full-time</span>
+            </div>
+            <p class="job-meta">Unicorn Denmart · Jun 2024 – Nov 2024 · PAN India</p>
+            <p>Medical device software, deployed and supported in live clinics.</p>
+            <ul class="chips">
+              <li><b>40%</b> downtime cut</li>
+              <li><b>98%</b> satisfaction</li>
+              <li>PAN-India rollout</li>
+              <li>Trained clinical staff</li>
+            </ul>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-head">
+              <h3>Technical Client Support Intern</h3>
+              <span class="tag">Internship</span>
+            </div>
+            <p class="job-meta">Darsa AI · Jun 2023 – Nov 2023 · Hyderabad / Remote</p>
+            <p>Between clients and engineers on a production AI alerting system.</p>
+            <ul class="chips">
+              <li><b>4 days → 1</b> resolution</li>
+              <li><b>3</b> production fixes</li>
+            </ul>
+          </article>
+
+          <article class="job reveal">
+            <div class="job-head">
+              <h3>Technical Trainee</h3>
+              <span class="tag">Trainee</span>
+            </div>
+            <p class="job-meta">Airports Authority of India · Aug 2023</p>
+            <p>A month inside compliance-driven aviation infrastructure.</p>
+            <ul class="chips">
+              <li>Systems documentation</li>
+              <li>Usability audits</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HACKATHONS ============ -->
+    <section id="hackathons" class="sec">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Hackathons</p>
+          <h2>I win a few. Then they ask me to judge.</h2>
+        </div>
+
+        <div class="hack-grid">
+          <figure class="hack-photo reveal">
+            <img src="asset/Images/profile/speaking.webp" alt="Sachin Gautam speaking at a lectern during a college event"
+                 width="900" height="1077" loading="lazy" decoding="async">
+            <figcaption>Speaking &amp; mentoring</figcaption>
+          </figure>
+
+          <div class="hack-cards">
+          <article class="card lift reveal">
+            <p class="eyebrow">Competing</p>
+            <h3>3× winner or runner-up</h3>
+            <p>Most recently the <strong>Coding Ninjas Inter-Campus Hackathon</strong>.</p>
+            <!-- TODO(Sachin): add the other two placements — event, year, result, what you built -->
+          </article>
+
+          <article class="card lift reveal">
+            <p class="eyebrow">Mentoring</p>
+            <h3>Invited mentor, including at Paytm</h3>
+            <p>Helping teams scope something shippable in the hours they have.</p>
+            <!-- TODO(Sachin): Paytm event name + date + mentor/judge; total count of events mentored -->
+          </article>
           </div>
         </div>
       </div>
-      <div class="footer-bottom">
-        &copy; 2026 Sachin Gautam. All rights reserved.
-      </div>
-    </footer>
+    </section>
 
-    <!-- ================= MODALS ================= -->
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="sec alt">
+      <div class="wrap">
+        <div class="about-grid">
+          <div class="reveal">
+            <figure class="about-photo">
+              <img src="asset/Images/profile/desk.webp" alt="Sachin Gautam working at the StaplerLabs office"
+                   width="900" height="1200" loading="lazy" decoding="async">
+            </figure>
+            <p class="eyebrow">About</p>
+            <h2>School taught me theory. India taught me the rest.</h2>
+            <p class="lede" style="margin-top:var(--s-4)">
+              I&rsquo;m a pre-final-year CS student &mdash; but the lessons that stuck came from clinics
+              across India, late support calls, and rooms where I had to convince brands to write cheques.
+            </p>
+            <p class="body-p">
+              I don&rsquo;t care much what a system does on my laptop. I care what it does on
+              someone else&rsquo;s, six months later, at 2am. That&rsquo;s the only test that counts.
+            </p>
+          </div>
 
-    <!-- Certification Modal -->
-    <div id="certModal" class="modal">
-      <div class="modal-box large">
-        <button class="close-btn" onclick="closeModal('certModal')">Back</button>
-        <h2>Certifications</h2>
-        <div class="cert-list">
-          <div class="cert-entry">
-            <h4>HackerRank Basic SQL</h4>
-            <p>Earned technical certifications in SQL.</p>
-            <img src="asset/Images/Certificates/sql.png" onclick="toggleZoom(this)" alt="SQL Cert"
-              onerror="this.src='https:/via.placeholder.com/100'">
-          </div>
-          <div class="cert-entry">
-            <h4>HackerRank Javascript</h4>
-            <p>Earned technical certifications in JavaScript.</p>
-            <img src="asset/Images/Certificates/js.png" onclick="toggleZoom(this)" alt="JS Cert"
-              onerror="this.src='https:/via.placeholder.com/100'">
-          </div>
-          <div class="cert-entry">
-            <h4>English Spoken B2 Level</h4>
-            <p>In collab with Cambridge University and DSEU.</p>
-            <img src="asset/Images/Certificates/english.png" onclick="toggleZoom(this)" alt="English Cert"
-              onerror="this.src='https:/via.placeholder.com/100'">
-          </div>
-          <div class="cert-entry">
-            <h4>NSS Special Camp</h4>
-            <p>Represented Delhi state at national level camp of 7 days with team of 6 members.</p>
-            <img src="asset/Images/Certificates/nss.png" onclick="toggleZoom(this)" alt="NSS Cert"
-              onerror="this.src='https:/via.placeholder.com/100'">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Web Projects Modal -->
-    <div id="webModal" class="modal">
-      <div class="modal-box large">
-        <button class="close-btn" onclick="closeModal('webModal')">Back</button>
-        <h2>Web Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h4>NGO Website</h4>
-            <p>A dedicated platform for social impact and community driving initiatives.</p>
-            <div class="project-links">
-              <a href="#" class="btn small">Live Demo</a>
-              <a href="#" class="btn small">GitHub</a>
-              <a href="#" class="btn small">Video</a>
+          <div class="pillars">
+            <div class="pillar reveal">
+              <h4>Systems builder</h4>
+              <p>I&rsquo;d rather ship something dull that never breaks than something clever that pages you at 3am.</p>
+            </div>
+            <div class="pillar reveal">
+              <h4>Problem solver</h4>
+              <p>&ldquo;It works now&rdquo; isn&rsquo;t enough. I want to know <em>why</em> it broke so it can&rsquo;t again.</p>
+            </div>
+            <div class="pillar reveal">
+              <h4>Execution &amp; leadership</h4>
+              <p>I&rsquo;ve led teams, closed sponsors, and been the name on the result. I don&rsquo;t hide from it.</p>
+            </div>
+            <div class="pillar reveal">
+              <h4>Product mindset</h4>
+              <p>Watching a real person fight your software in front of you changes how you build. For good.</p>
             </div>
           </div>
-          <!-- Add more grid items as placeholders -->
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- IoT Projects Modal -->
-    <div id="iotModal" class="modal">
-      <div class="modal-box large">
-        <button class="close-btn" onclick="closeModal('iotModal')">Back</button>
-        <h2>IoT Systems</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h4>Eysonic</h4>
-            <p>Advanced ultrasonic sensor system for visually impaired assistance.</p>
-            <img src="asset/Images/IoT/eysonic.jpg" alt="Eysonic" onerror="this.src='https://via.placeholder.com/200'">
+    <!-- ============ SKILLS + EDUCATION (deliberately static) ============ -->
+    <section class="sec">
+      <div class="wrap split">
+        <div>
+          <div class="sec-head"><p class="eyebrow">Toolkit</p><h2>Tools &amp; fundamentals</h2></div>
+          <dl class="skills">
+            <div><dt>Languages</dt><dd>Java · C++ <span class="muted">(learning)</span></dd></div>
+            <div><dt>Web</dt><dd>HTML · CSS · JavaScript (ES6)</dd></div>
+            <div><dt>Backend &amp; data</dt><dd>Node.js · SQL</dd></div>
+            <div><dt>Tools</dt><dd>Git · GitHub · VS Code · Postman</dd></div>
+            <div><dt>Fundamentals</dt><dd>DSA · OOP · DBMS · Operating Systems · Networks</dd></div>
+            <div><dt>Also</dt><dd>Technical documentation · WordPress · MS Office</dd></div>
+          </dl>
+        </div>
+
+        <div>
+          <div class="sec-head"><p class="eyebrow">Education</p><h2>Education</h2></div>
+          <div class="edu">
+            <div class="edu-row">
+              <img src="asset/Images/Education/mait.png" alt="" loading="lazy" decoding="async" width="44" height="44">
+              <div>
+                <h4>Maharaja Agrasen Institute of Technology</h4>
+                <p>B.Tech, Computer Science &amp; Technology · GGSIPU</p>
+              </div>
+              <span class="yr">2025–28</span>
+            </div>
+            <div class="edu-row">
+              <img src="asset/Images/Education/dseu.png" alt="" loading="lazy" decoding="async" width="44" height="44">
+              <div>
+                <h4>Delhi Skill and Entrepreneurship University</h4>
+                <p>Diploma in Computer Engineering · <strong>Distinction</strong></p>
+              </div>
+              <span class="yr">2021–24</span>
+            </div>
           </div>
+
+          <div class="sec-head" style="margin-top:var(--s-8)"><p class="eyebrow">Certifications</p><h2>Certifications</h2></div>
+          <ul class="certs">
+            <li>HackerRank — SQL (Basic)</li>
+            <li>HackerRank — JavaScript</li>
+            <li>Cambridge English B2 — with DSEU</li>
+            <li>NSS Special Camp — represented Delhi State</li>
+          </ul>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Impact Modal -->
-    <div id="impactModal" class="modal">
-      <div class="modal-box fullscreen">
-        <button class="close-btn" onclick="closeModal('impactModal')">Back</button>
-        <h2>Impact Snapshot</h2>
-        <p>Systems I have touched. How I think.</p>
-        <!--I want the image should be running on this impact model view and when people will open the one pop up should be open and all image can be showl one by one -->
-        <div class="wall-item"><img src="asset/Images/Impact/1.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=1'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/2.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=2'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/3.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=3'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/4.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=4'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/5.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=5'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/6.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=6'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/7.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=7'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/8.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=8'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/9.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=9'"></div>
-        <div class="wall-item"><img src="asset/Images/Impact/10.jpg"
-            onerror="this.src='https:/via.placeholder.com/300?text=10'"></div>
-
-        <div class="wall-grid">
-          <!-- 10 Grid Items -->
-          <div class="wall-item"><img src="asset/Images/Impact/1.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=1'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/2.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=2'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/3.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=3'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/4.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=4'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/5.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=5'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/6.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=6'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/7.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=7'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/8.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=8'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/9.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=9'"></div>
-          <div class="wall-item"><img src="asset/Images/Impact/10.jpg"
-              onerror="this.src='https:/via.placeholder.com/300?text=10'"></div>
+    <!-- ============ ACHIEVEMENTS (static grid) ============ -->
+    <section class="sec alt">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <p class="eyebrow">Beyond the code</p>
+          <h2>Leadership &amp; recognition</h2>
         </div>
-        <div style="text-align: center; margin-top: 20px;">
-          <button class="btn primary small" onclick="switchImpactImages()">Next View &rarr;</button>
+        <div class="ach-grid">
+          <div class="ach"><h4>G20 Inter-University Representation</h4><p>Placed <strong>2nd</strong>, national level.</p></div>
+          <div class="ach"><h4>₹1 Lakh+ in sponsorships</h4><p><strong>TVS · StockGrow · Unacademy.</strong> Cold outreach to close, solo.</p></div>
+          <div class="ach"><h4>President, Placement Cell — DSEU</h4><p>Recruiter relationships and student readiness.</p></div>
+          <div class="ach"><h4>Co-Founder, E-Cell — DSEU Dwarka</h4><p>Built the events that started startup culture there.</p></div>
+          <div class="ach"><h4>Campus event leadership</h4><p><strong>5,000+</strong> footfall · <strong>40+</strong> volunteers.</p></div>
+          <div class="ach"><h4>Amazon Smbhav — campus coordination</h4><p>Led <strong>20+</strong> coordinators.</p></div>
+          <div class="ach"><h4>NSS National Camp</h4><p><strong>Delhi State</strong>, alongside <strong>24+</strong> states.</p></div>
+          <div class="ach"><h4>President, Management &amp; Marketing Club</h4><p>Directed Foundation Day and other large events.</p></div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <script src="asset/JS/script.js"></script>
+    <!-- ============ PROOF WALL ============ -->
+    <section class="sec proof-sec">
+      <div class="wrap sec-head reveal">
+        <p class="eyebrow">Proof of work</p>
+        <h2>Rooms I've been in</h2>
+      </div>
+      <!-- TODO(Sachin): replace each alt with a real caption describing what the photo shows -->
+      <div class="marquee" id="marquee">
+        <div class="marquee-track">
+          <img src="asset/Images/Impact/1.jpg" alt="Sachin at a campus event" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/2.jpg" alt="Team coordination during an event" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/3.jpg" alt="On stage at a college programme" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/4.jpg" alt="Working with a student team" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/5.jpg" alt="Group photo from the NSS national camp" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/6.jpg" alt="Speaking to an audience" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/7.jpg" alt="Event volunteers on site" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/8.jpg" alt="Receiving recognition at a college event" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/9.jpg" alt="Panel or group discussion session" loading="lazy" decoding="async">
+          <img src="asset/Images/Impact/10.jpg" alt="Team photo after an event" loading="lazy" decoding="async">
+          <img src="asset/Images/profile/cyclothon.webp" alt="Sachin Gautam at the HCL Cyclothon event" loading="lazy" decoding="async">
+          <img src="asset/Images/profile/portrait.webp" alt="Sachin Gautam on the MAIT campus" loading="lazy" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="sec alt">
+      <div class="wrap">
+        <div class="contact-grid">
+          <div class="reveal">
+            <p class="eyebrow">Contact</p>
+            <h2>Got something worth building?</h2>
+            <p class="lede" style="margin-top:var(--s-4)">
+              I&rsquo;m after work where the software has real users and real stakes. If that&rsquo;s what
+              you&rsquo;re building, tell me about it &mdash; I reply to everything.
+            </p>
+            <div class="contact-rows">
+              <a class="crow" href="mailto:Sachin.gautam8292@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg>
+                <span><small>Email</small>Sachin.gautam8292@gmail.com</span>
+              </a>
+              <div class="crow static">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.8"/></svg>
+                <span><small>Location</small>New Delhi, India</span>
+              </div>
+              <a class="crow" href="asset/Sachin Resume All.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/></svg>
+                <span><small>Resume</small>Open PDF</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- TODO(Sachin): replace FORM_ENDPOINT with your Formspree ID (or a Vercel function).
+               Until then the form falls back to opening your mail client. -->
+          <form class="form reveal" id="contactForm" method="POST" data-endpoint="">
+            <div class="field">
+              <label for="cf-name">Your name</label>
+              <input id="cf-name" name="name" type="text" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="cf-email">Your email</label>
+              <input id="cf-email" name="email" type="email" required autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="cf-msg">What are you working on?</label>
+              <textarea id="cf-msg" name="message" rows="5" required></textarea>
+            </div>
+            <button class="btn solid full" type="submit">Send message</button>
+            <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <!-- Book a 1:1 -->
+        <div class="book-wrap reveal">
+          <div class="book-head">
+            <p class="eyebrow">Book a 1:1</p>
+            <h3>Grab 30 minutes with me</h3>
+            <p class="book-sub">Career, code, or building a startup &mdash; pick a topic and a time that suits you.
+              I&rsquo;ll confirm by email.</p>
+          </div>
+          <!-- On submit this emails the request straight to Sachin. Swap data-endpoint for a
+               Formspree ID to receive it without the visitor needing a mail app. -->
+          <form class="book-form" id="bookForm" method="POST" data-endpoint=""
+                data-to="sachin.gautam8292@gmail.com">
+            <div class="book-grid">
+              <div class="field"><label for="bk-name">Name</label>
+                <input id="bk-name" name="name" type="text" required autocomplete="name"></div>
+              <div class="field"><label for="bk-email">Email</label>
+                <input id="bk-email" name="email" type="email" required autocomplete="email"></div>
+            </div>
+            <div class="book-grid">
+              <div class="field"><label for="bk-topic">Topic</label>
+                <select id="bk-topic" name="topic" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option>Career guidance</option>
+                  <option>Code / engineering</option>
+                  <option>Startup &amp; building</option>
+                  <option>Something else</option>
+                </select></div>
+              <div class="field"><label for="bk-when">Preferred time</label>
+                <input id="bk-when" name="when" type="text" placeholder="e.g. Sat evening" required></div>
+            </div>
+            <button class="btn solid full" type="submit">Request my slot</button>
+            <p class="form-note" id="bookNote" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <div>
+        <p class="foot-name">Sachin Gautam</p>
+        <p class="foot-tag">Still shipping. Still picking up the phone.</p>
+      </div>
+      <div class="socials">
+        <a href="mailto:Sachin.gautam8292@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/></svg></a>
+        <a href="https://linkedin.com/in/sachin-gautam-1484a2227/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10.5v6M7.5 7.6v.1M11.5 16.5v-6M11.5 13c0-1.4 1-2.5 2.4-2.5s2.6 1 2.6 2.7v3.3"/></svg></a>
+        <a href="https://github.com/sach-gtm" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.5 1.5-4.5-2.5-6.5-3M15 21v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.3 4.3 0 0 0-.1-3.2s-1-.3-3.5 1.3a12 12 0 0 0-6.2 0C6.4 2.8 5.4 3.1 5.4 3.1a4.3 4.3 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a>
+        <a href="https://twitter.com/sachgtm" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg></a>
+      </div>
+      <p class="copy">© <span id="yr">2026</span> Sachin Gautam</p>
+    </div>
+  </footer>
+
+  <script src="asset/JS/main.js" defer></script>
 </body>
 
 </html>
