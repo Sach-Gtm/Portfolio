@@ -24,8 +24,8 @@
     try { saved = localStorage.getItem(THEME_KEY); } catch (e) {}
     if (saved === 'dark' || saved === 'light') {
       root.setAttribute('data-theme', saved);
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      root.setAttribute('data-theme', 'dark');
+    } else {
+      root.setAttribute('data-theme', 'dark');   // dark sky-blue is the default
     }
   })();
 
